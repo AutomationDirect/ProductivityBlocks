@@ -43,7 +43,7 @@ Once a block program has been created, click the 'Verify' button to check the ge
 
 When the program is ready, use the 'Upload' button to push the program to a connected Arduino board.
 
-#Basic Block Programming
+# Basic Block Programming
 
 Each block represents a piece of a full program. There a few special blocks that represent the full c++ program:
 
