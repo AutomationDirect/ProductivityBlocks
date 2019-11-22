@@ -59,3 +59,39 @@ Each block represents a piece of a full program. There a few special blocks that
 
 ![](images/p1_programblock.png)
 
+Block programs may only have one of these blocks in the main canvas, otherwise the program will not be able to verify or compile. After placing one of these blocks on the main canvas, the program can be created by snapping new blocks onto its connectors. 
+
+## Basic Block Types
+
+There are four different kinds of blocks:
+-**Program**: Contains the c++ program to be loaded onto an Arduino board (as described above).
+
+![](images/p1_program.png)
+
+-**Command**: An operation to be done in the program.
+
+![](images/digitalwrite_1.png) ![](images/monitorprintscreen.png)
+
+-**Function**: An operation that returns a value to be used in the program.
+
+![](images/digitalread_1.png) ![](images/analogread_1.png)
+
+-**Data**: Variables and constants.
+
+![](images/integerconstant.png) ![](images/booleanconstant.png) ![](images/characterconstant.png) ![](images/stringvariable.png)
+
+## Data Types
+
+There are 5 different basic data types in ProductivityBlocks:
+
+-**Integer**
+-**Long Integer**
+-**Boolean**
+-**Character**
+-**String** 
+
+![](images/variablesandconstants.png)
+
+Each type has a variable block to go with it. Variables can have a user-defined name and can be set using the ‘set variable’ blocks:
+
+![](images/setinteger.png)
