@@ -8,7 +8,7 @@ ProductivityBlocks is a tool for the Arduino software, and will not work properl
 
 ###Windows:
 
-1. Download the latest ProductivityBlocks installer for Windows from the [Releases](https://github.com/ProductivityBlocks/ProductivityBlocks/releases).
+1. Download the latest ProductivityBlocks installer for Windows from the [Releases](https://github.com/proberts1/ProductivityBlocks/releases).
 2. Close any Arduino Editor windows.
 
     ![](images/closearduino.png)
