@@ -1,12 +1,12 @@
-#ProductivityBlocks
+# ProductivityBlocks
 
 ProductivityBlocks is an open source block programming tool for the [Arduino Editor](http://www.arduino.cc/en/Main/Software). The application is designed to work with the [P1AM-100 library](https://github.com/facts-engineering/P1AM) to program a P1AM CPU. 
 
-##Installation
+## Installation
 Before installing ProductivityBlocks, please install the [Arduino Editor](https://www.arduino.cc/en/Main/Software).
 ProductivityBlocks is a tool for the Arduino software, and will not work properly unless the Arduino software is installed.
 
-###Windows:
+### Windows:
 
 1. Download the latest ProductivityBlocks installer for Windows from the [Releases](https://github.com/adcpblocks/ProductivityBlocks/releases).
 2. Close any Arduino Editor windows.
@@ -20,7 +20,7 @@ ProductivityBlocks is a tool for the Arduino software, and will not work properl
 
     ![](images/selectproductivityblocks.png)
 
-#Getting Started
+# Getting Started
 
 ProductivityBlocks is a graphical block programming tool that writes c++ code to the Arduino software. 
 
