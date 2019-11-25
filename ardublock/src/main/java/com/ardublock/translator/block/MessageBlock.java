@@ -27,11 +27,7 @@ public class MessageBlock extends TranslatorBlock
 		// A way to add \n to messages
 		ret = ret.replaceAll("<&newline>", "\\\\n");
 		ret = "\"" + ret + "\"";
-		TranslatorBlock translatorBlock = this.getTranslatorBlockAtSocket(0, codePrefix, codeSuffix);
-		if (translatorBlock != null)
-		{
-			ret = ret + " + " +  translatorBlock.toCode();
-		}
+
 		ret = codePrefix + ret + codeSuffix;
 		return ret;
 	}

@@ -31,7 +31,7 @@
 				<text></text>
 			</description>
 		</BlockGenus>
-		<BlockGenus name="spacer2" kind="command" color="15 179 19" initlabel="">
+		<BlockGenus name="spacer2" kind="command" color="0 151 57" initlabel="">
 			<description>
 				<text></text>
 			</description>
@@ -92,7 +92,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="P1_program" kind="command" color="15 173 19" initlabel="bg.P1_program" is-starter="yes" is-terminator="yes" label-unique="no">
+		<BlockGenus name="P1_program" kind="command" color="0 151 57" initlabel="bg.P1_program" is-starter="yes" is-terminator="yes" label-unique="no">
 			<description>
 				<text>this is the loop of the arduino</text>
 				<arg-description n="2" name="setup">
@@ -1662,6 +1662,20 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
+		<BlockGenus name="string_add" kind="function" color="240 120 15" initlabel="bg.string_add">
+			<description>
+				<text></text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" >
+					<!-- CLUDGE:: This apparently daft line enables 'clone' to work correctly on this BlockGenus -->
+					<DefaultArg genus-name="dummy" label="" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" position-type="bottom" />
+				<BlockConnector connector-type="string" connector-kind="socket" position-type="bottom" />
+			</BlockConnectors>
+		</BlockGenus>
+		
 		<BlockGenus name="string_empty" kind="function" color="240 120 15" initlabel="bg.string_empty">
 			<description>
 				<text>is upper number greater then lower?</text>
@@ -2107,8 +2121,7 @@
 				<text>string message</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="string" connector-kind="plug" />
-				<BlockConnector connector-type="string" connector-kind="socket" />
+				<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
 
@@ -2365,56 +2378,6 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="SerialMonitorStart" kind="command" color="0 151 157" initlabel="bg.StartSerialMonitor">
-			<description>
-				<text></text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="baud">
-					<DefaultArg genus-name="number" label="9600"/>
-				</BlockConnector>
-			</BlockConnectors>
-		</BlockGenus>
-
-		<BlockGenus name="SerialMonitorprintString" kind="command" color="0 151 157" initlabel="bg.SerialMonitorprintString">
-			<description>
-				<text></text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="string" connector-kind="socket" label="string">
-					<DefaultArg genus-name="message" label="STRING"/>
-				</BlockConnector>
-				<BlockConnector connector-type="boolean" connector-kind="socket" label="newline">
-					<DefaultArg genus-name="true" label="true"/>
-				</BlockConnector>
-			</BlockConnectors>
-		</BlockGenus>	
-		<BlockGenus name="SerialMonitorprintNumber" kind="command" color="0 151 157" initlabel="bg.SerialMonitorprintNumber">
-			<description>
-				<text></text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="number">
-					<DefaultArg genus-name="number" label="1"/>
-				</BlockConnector>
-				<BlockConnector connector-type="boolean" connector-kind="socket" label="newline">
-					<DefaultArg genus-name="true" label="true"/>
-				</BlockConnector>
-			</BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="SerialMonitorprintChar" kind="command" color="0 151 157" initlabel="bg.SerialMonitiorprintChar">
-			<description>
-				<text></text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="poly" connector-kind="socket" label="char">
-					<DefaultArg genus-name="char" label="A"/>
-				</BlockConnector>
-				<BlockConnector connector-type="boolean" connector-kind="socket" label="newline">
-					<DefaultArg genus-name="true" label="true"/>
-				</BlockConnector>
-			</BlockConnectors>
-		</BlockGenus>
 	
 <!--CONSTANTS 
 	true
@@ -2475,7 +2438,7 @@
 				<BlockConnector connector-type="number" connector-kind="plug">
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="port">
-					<DefaultArg genus-name="SerialPort0" label="Default"/>
+					<DefaultArg genus-name="SerialPort0" label="Monitor"/>
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
@@ -2487,7 +2450,7 @@
 				<BlockConnector connector-type="number" connector-kind="plug">
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="port">
-					<DefaultArg genus-name="SerialPort0" label="Default"/>
+					<DefaultArg genus-name="SerialPort0" label="Monitor"/>
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
@@ -2503,7 +2466,7 @@
 					<DefaultArg genus-name="SERIAL_8N1" label="SERIAL_8N1"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="port">
-					<DefaultArg genus-name="SerialPort0" label="Default"/>
+					<DefaultArg genus-name="SerialPort0" label="Monitor"/>
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
@@ -2513,7 +2476,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="port">
-					<DefaultArg genus-name="SerialPort0" label="Default"/>
+					<DefaultArg genus-name="SerialPort0" label="Monitor"/>
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
@@ -2527,7 +2490,7 @@
 					<DefaultArg genus-name="char" label="A"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="port">
-					<DefaultArg genus-name="SerialPort0" label="Default"/>
+					<DefaultArg genus-name="SerialPort0" label="Monitor"/>
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
@@ -2537,7 +2500,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="port">
-					<DefaultArg genus-name="SerialPort0" label="Default"/>
+					<DefaultArg genus-name="SerialPort0" label="Monitor"/>
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
@@ -2554,7 +2517,7 @@
 					<DefaultArg genus-name="char" label="A"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="port">
-					<DefaultArg genus-name="SerialPort0" label="Default"/>
+					<DefaultArg genus-name="SerialPort0" label="Monitor"/>
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>		
@@ -2571,7 +2534,7 @@
 					<DefaultArg genus-name="char" label="A"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="port">
-					<DefaultArg genus-name="SerialPort0" label="Default"/>
+					<DefaultArg genus-name="SerialPort0" label="Monitor"/>
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>	
@@ -2582,7 +2545,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="port">
-					<DefaultArg genus-name="SerialPort0" label="Default"/>
+					<DefaultArg genus-name="SerialPort0" label="Monitor"/>
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>	
@@ -2598,10 +2561,10 @@
 					<DefaultArg genus-name="true" label="true"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="port">
-					<DefaultArg genus-name="SerialPort0" label="Default"/>
+					<DefaultArg genus-name="SerialPort0" label="Monitor"/>
 				</BlockConnector>
 			</BlockConnectors>
-		</BlockGenus>	
+		</BlockGenus>
 		<BlockGenus name="Serial.printNumber" kind="command" color="0 151 157" initlabel="bg.Serial.printNumber">
 			<description>
 				<text></text>
@@ -2614,7 +2577,55 @@
 					<DefaultArg genus-name="true" label="true"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="port">
-					<DefaultArg genus-name="SerialPort0" label="Default"/>
+					<DefaultArg genus-name="SerialPort0" label="Monitor"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Serial.printNumberBin" kind="command" color="0 151 157" initlabel="bg.Serial.printNumberBin">
+			<description>
+				<text></text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="number">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="newline">
+					<DefaultArg genus-name="true" label="true"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="port">
+					<DefaultArg genus-name="SerialPort0" label="Monitor"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Serial.printNumberHex" kind="command" color="0 151 157" initlabel="bg.Serial.printNumberHex">
+			<description>
+				<text></text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="number">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="newline">
+					<DefaultArg genus-name="true" label="true"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="port">
+					<DefaultArg genus-name="SerialPort0" label="Monitor"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Serial.printNumberOct" kind="command" color="0 151 157" initlabel="bg.Serial.printNumberOct">
+			<description>
+				<text></text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="number">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="newline">
+					<DefaultArg genus-name="true" label="true"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="port">
+					<DefaultArg genus-name="SerialPort0" label="Monitor"/>
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
@@ -2630,7 +2641,23 @@
 					<DefaultArg genus-name="true" label="true"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="port">
-					<DefaultArg genus-name="SerialPort0" label="Default"/>
+					<DefaultArg genus-name="SerialPort0" label="Monitor"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Serial.printBool" kind="command" color="0 151 157" initlabel="bg.Serial.printBool">
+			<description>
+				<text></text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="value">
+					<DefaultArg genus-name="true" label="true"/>
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="newline">
+					<DefaultArg genus-name="true" label="true"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="port">
+					<DefaultArg genus-name="SerialPort0" label="Monitor"/>
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
@@ -2641,7 +2668,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="port">
-					<DefaultArg genus-name="SerialPort0" label="Default"/>
+					<DefaultArg genus-name="SerialPort0" label="Monitor"/>
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>	
@@ -2652,7 +2679,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="string" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="port">
-					<DefaultArg genus-name="SerialPort0" label="Default"/>
+					<DefaultArg genus-name="SerialPort0" label="Monitor"/>
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>	
@@ -2665,7 +2692,7 @@
 					<DefaultArg genus-name="number_long" label="1000"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="port">
-					<DefaultArg genus-name="SerialPort0" label="Default"/>
+					<DefaultArg genus-name="SerialPort0" label="Monitor"/>
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
@@ -2678,10 +2705,13 @@
 			</BlockConnectors>
 		</BlockGenus>
 		<BlockGenus name="Serial_is_open" kind="function" color="0 151 157" initlabel="bg.Serial_is_open">
+			<description>
+				<text></text>
+			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug"/>
 				<BlockConnector connector-type="number" connector-kind="socket" label="port">
-					<DefaultArg genus-name="SerialPort0" label="Default"/>
+					<DefaultArg genus-name="SerialPort0" label="Monitor"/>
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
@@ -2906,28 +2936,40 @@
 			</BlockConnectors>
 		</BlockGenus>
 		<BlockGenus name="SerialPort0" kind="data" color="0 151 156" initlabel="bg.SerialPort0" editable-label="no">
+			<description>
+				<text></text>
+			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
 		<BlockGenus name="SerialPort1" kind="data" color="0 151 156" initlabel="bg.SerialPort1" editable-label="no">
+			<description>
+				<text></text>
+			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
 		<BlockGenus name="SerialPort2" kind="data" color="0 151 156" initlabel="bg.SerialPort2" editable-label="no">
+			<description>
+				<text></text>
+			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
 		<BlockGenus name="SerialPort3" kind="data" color="0 151 156" initlabel="bg.SerialPort3" editable-label="no">
+			<description>
+				<text></text>
+			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
 
 <!-- ADC BLOCKS  -->
-		<BlockGenus name="RSS" kind="data" initlabel="bg.RSS" editable-label="no" is-label-value="yes" color="15 173 19">
+		<BlockGenus name="RSS" kind="data" initlabel="bg.RSS" editable-label="no" is-label-value="yes" color="0 151 57">
 			<description>
 				<text>
 					Digital Var
@@ -2937,7 +2979,7 @@
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="LED" kind="data" initlabel="bg.LED" editable-label="no" is-label-value="yes" color="15 173 19">
+		<BlockGenus name="LED" kind="data" initlabel="bg.LED" editable-label="no" is-label-value="yes" color="0 151 57">
 			<description>
 				<text>
 					Digital Var
@@ -2947,7 +2989,7 @@
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="SDCS" kind="data" initlabel="bg.SDCS" editable-label="no" is-label-value="yes" color="15 173 19">
+		<BlockGenus name="SDCS" kind="data" initlabel="bg.SDCS" editable-label="no" is-label-value="yes" color="0 151 57">
 			<description>
 				<text>
 					Digital Var
@@ -2957,7 +2999,7 @@
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="runstopswitch" kind="function" color="15 173 19" initlabel="bg.runstopswitch">
+		<BlockGenus name="runstopswitch" kind="function" color="0 151 57" initlabel="bg.runstopswitch">
 			<description>
 				<text></text>
 			</description>
@@ -2965,12 +3007,12 @@
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror"></BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="writeled" kind="command" color="15 173 19" initlabel="bg.writeled">
+		<BlockGenus name="writeled" kind="command" color="0 151 57" initlabel="bg.writeled">
 			<description>
 				<text></text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="socket" label="set value">
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="value">
 					<DefaultArg genus-name="true" label="true"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -2980,7 +3022,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="writeDiscrete" kind="command" color="15 173 19" initlabel="bg.writeDiscrete">
+		<BlockGenus name="writeDiscrete" kind="command" color="0 151 57" initlabel="bg.writeDiscrete">
 			<description>
 				<text>Write the low bit of 'Value' to a channel of a P1 module.</text>
 			</description>
@@ -2998,7 +3040,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="writeDiscreteBit" kind="command" color="15 173 19" initlabel="bg.writeDiscreteBit">
+		<BlockGenus name="writeDiscreteBit" kind="command" color="0 151 57" initlabel="bg.writeDiscreteBit">
 			<description>
 				<text>Write the low bit of 'Value' to a channel of a P1 module.</text>
 			</description>
@@ -3019,7 +3061,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="readDiscrete" kind="function" color="15 173 19" initlabel="bg.readDiscrete">
+		<BlockGenus name="readDiscrete" kind="function" color="0 151 57" initlabel="bg.readDiscrete">
 			<description>
 				<text>Write the low bit of 'Value' to a channel of a P1 module.</text>
 			</description>
@@ -3029,9 +3071,6 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="Slot">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="Point">
-					<DefaultArg genus-name="number" label="0" />
-				</BlockConnector>
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -3039,7 +3078,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="readDiscreteBoolean" kind="function" color="15 173 19" initlabel="bg.readDiscreteBoolean">
+		<BlockGenus name="readDiscreteBoolean" kind="function" color="0 151 57" initlabel="bg.readDiscreteBoolean">
 			<description>
 				<text>Write the low bit of 'Value' to a channel of a P1 module.</text>
 			</description>
@@ -3059,7 +3098,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="P1Autoinit" kind="command" color="15 173 19" initlabel="bg.P1Autoinit">
+		<BlockGenus name="P1Autoinit" kind="command" color="0 151 57" initlabel="bg.P1Autoinit">
 			<description>
 				<text>Initialize P1 modules</text>
 			</description>
@@ -3069,7 +3108,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="P1init" kind="function" color="15 173 19" initlabel="bg.P1init">
+		<BlockGenus name="P1init" kind="function" color="0 151 57" initlabel="bg.P1init">
 			<description>
 			<text>Initialize P1 modules</text>
 			</description>
@@ -3077,7 +3116,7 @@
 				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="getFwVersion" kind="command" color="15 173 19" initlabel="bg.getFwVersion">
+		<BlockGenus name="getFwVersion" kind="command" color="0 151 57" initlabel="bg.getFwVersion">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3088,7 +3127,7 @@
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="P1_blink" kind="command" color="15 173 19" initlabel="bg.P1_blink">
+		<BlockGenus name="P1_blink" kind="command" color="0 151 57" initlabel="bg.P1_blink">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3113,7 +3152,7 @@
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="writeAnalog" kind="command" color="15 173 19" initlabel="bg.writeAnalog">
+		<BlockGenus name="writeAnalog" kind="command" color="0 151 57" initlabel="bg.writeAnalog">
 			<description>
 				<text>Write the low bit of 'Value' to a channel of a P1 module.</text>
 			</description>
@@ -3134,7 +3173,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="readAnalog" kind="function" color="15 173 19" initlabel="bg.readAnalog">
+		<BlockGenus name="readAnalog" kind="function" color="0 151 57" initlabel="bg.readAnalog">
 			<description>
 				<text>Write the low bit of 'Value' to a channel of a P1 module.</text>
 			</description>
@@ -3154,7 +3193,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="readTemperature" kind="function" color="15 173 19" initlabel="bg.readTemperature">
+		<BlockGenus name="readTemperature" kind="function" color="0 151 57" initlabel="bg.readTemperature">
 			<description>
 				<text>Write the low bit of 'Value' to a channel of a P1 module.</text>
 			</description>
@@ -3164,9 +3203,6 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="Slot">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="Point">
-					<DefaultArg genus-name="number" label="1" />
-				</BlockConnector>
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -3174,7 +3210,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="_04AD_config" kind="command" color="15 173 19" initlabel="bg._04AD_config">
+		<BlockGenus name="_04AD_config" kind="command" color="0 151 57" initlabel="bg._04AD_config">
 			<description>
 				<text>Write a buffer to configure a P1 module.</text>
 				<arg-description name="Slot" n="1">Module Slot Number</arg-description>
@@ -3218,7 +3254,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="_04THM_config" kind="command" color="15 173 19" initlabel="bg._04THM_config">
+		<BlockGenus name="_04THM_config" kind="command" color="0 151 57" initlabel="bg._04THM_config">
 			<description>
 				<text>Write a buffer to configure a P1 module.</text>
 			</description>
@@ -3251,7 +3287,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="_04NTC_config" kind="command" color="15 173 19" initlabel="bg._04NTC_config">
+		<BlockGenus name="_04NTC_config" kind="command" color="0 151 57" initlabel="bg._04NTC_config">
 			<description>
 				<text></text>
 			</description>
@@ -3278,7 +3314,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="_04RTD_config" kind="command" color="15 173 19" initlabel="bg._04RTD_config">
+		<BlockGenus name="_04RTD_config" kind="command" color="0 151 57" initlabel="bg._04RTD_config">
 			<description>
 				<text></text>
 			</description>
@@ -3305,7 +3341,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="AD_chan_config" kind="command" color="15 173 19" initlabel="bg.AD_chan_config">
+		<BlockGenus name="AD_chan_config" kind="command" color="0 151 57" initlabel="bg.AD_chan_config">
 			<description>
 				<text></text>
 			</description>
@@ -3323,7 +3359,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="PWM_config" kind="command" color="15 173 19" initlabel="bg.PWM_config">
+		<BlockGenus name="PWM_config" kind="command" color="0 151 57" initlabel="bg.PWM_config">
 			<description>
 				<text></text>
 			</description>
@@ -3350,7 +3386,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="_4ADL2DAL_config" kind="command" color="15 173 19" initlabel="bg._4ADL2DAL_config">
+		<BlockGenus name="_4ADL2DAL_config" kind="command" color="0 151 57" initlabel="bg._4ADL2DAL_config">
 			<description>
 				<text></text>
 			</description>
@@ -3365,7 +3401,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="writePWM" kind="command" color="15 173 19" initlabel="bg.writePWM">
+		<BlockGenus name="writePWM" kind="command" color="0 151 57" initlabel="bg.writePWM">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3389,7 +3425,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="writePWMDuty" kind="command" color="15 173 19" initlabel="bg.writePWMDuty">
+		<BlockGenus name="writePWMDuty" kind="command" color="0 151 57" initlabel="bg.writePWMDuty">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3410,7 +3446,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="writePWMFreq" kind="command" color="15 173 19" initlabel="bg.writePWMFreq">
+		<BlockGenus name="writePWMFreq" kind="command" color="0 151 57" initlabel="bg.writePWMFreq">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3431,7 +3467,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="writePWMDir" kind="command" color="15 173 19" initlabel="bg.writePWMDir">
+		<BlockGenus name="writePWMDir" kind="command" color="0 151 57" initlabel="bg.writePWMDir">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3452,7 +3488,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="printModules" kind="command" color="15 173 19" initlabel="bg.printModules">
+		<BlockGenus name="printModules" kind="command" color="0 151 57" initlabel="bg.printModules">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3464,7 +3500,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="readStatus" kind="function" color="15 173 19" initlabel="bg.readStatus">
+		<BlockGenus name="readStatus" kind="function" color="0 151 57" initlabel="bg.readStatus">
 			<description>
 				<text>Write the low bit of 'Value' to a channel of a P1 module.</text>
 			</description>
@@ -3484,7 +3520,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="configWD" kind="command" color="15 173 19" initlabel="bg.configWD">
+		<BlockGenus name="configWD" kind="command" color="0 151 57" initlabel="bg.configWD">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3502,7 +3538,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="startWD" kind="command" color="15 173 19" initlabel="bg.startWD">
+		<BlockGenus name="startWD" kind="command" color="0 151 57" initlabel="bg.startWD">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3514,7 +3550,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="stopWD" kind="command" color="15 173 19" initlabel="bg.stopWD">
+		<BlockGenus name="stopWD" kind="command" color="0 151 57" initlabel="bg.stopWD">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3526,7 +3562,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="petWD" kind="command" color="15 173 19" initlabel="bg.petWD">
+		<BlockGenus name="petWD" kind="command" color="0 151 57" initlabel="bg.petWD">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3538,7 +3574,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="rollCall" kind="function" color="15 173 19" initlabel="bg.rollCall">
+		<BlockGenus name="rollCall" kind="function" color="0 151 57" initlabel="bg.rollCall">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3603,7 +3639,7 @@
 		
 		
 		<!-- HSC BLOCKS -->
-		<BlockGenus name="P1_HSC" kind="data" color="15 173 19" initlabel="bg.P1_HSC" editable-label="yes">
+		<BlockGenus name="P1_HSC" kind="data" color="0 151 57" initlabel="bg.P1_HSC" editable-label="yes">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3611,7 +3647,7 @@
 				<BlockConnector connector-type="poly-list" connector-kind="plug" position-type="mirror"></BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Module_Constructor" kind="command" color="15 173 19" initlabel="bg.P1_HSC_Module_Constructor">
+		<BlockGenus name="P1_HSC_Module_Constructor" kind="command" color="0 151 57" initlabel="bg.P1_HSC_Module_Constructor">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3629,7 +3665,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Module.configureChannels" kind="command" color="15 173 19" initlabel="bg.P1_HSC_Module.configureChannels">
+		<BlockGenus name="P1_HSC_Module.configureChannels" kind="command" color="0 151 57" initlabel="bg.P1_HSC_Module.configureChannels">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3644,7 +3680,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Module.configureChannels_chan1_chan2" kind="command" color="15 173 19" initlabel="bg.P1_HSC_Module.configureChannels_chan1_chan2">
+		<BlockGenus name="P1_HSC_Module.configureChannels_chan1_chan2" kind="command" color="0 151 57" initlabel="bg.P1_HSC_Module.configureChannels_chan1_chan2">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3665,7 +3701,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Module.readInputs" kind="function" color="15 173 19" initlabel="bg.P1_HSC_Module.readInputs">
+		<BlockGenus name="P1_HSC_Module.readInputs" kind="function" color="0 151 57" initlabel="bg.P1_HSC_Module.readInputs">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3681,7 +3717,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Module.getChannel" kind="function" color="15 173 19" initlabel="bg.P1_HSC_Module.getChannel">
+		<BlockGenus name="P1_HSC_Module.getChannel" kind="function" color="0 151 57" initlabel="bg.P1_HSC_Module.getChannel">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3700,7 +3736,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Module.channel1" kind="data" color="15 173 19" initlabel="bg.P1_HSC_Module.channel1" editable-label="no">
+		<BlockGenus name="P1_HSC_Module.channel1" kind="data" color="0 151 57" initlabel="bg.P1_HSC_Module.channel1" editable-label="no">
 			<description>
 				<text></text>
 			</description>
@@ -3708,7 +3744,7 @@
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>	
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Module.channel2" kind="data" color="15 173 19" initlabel="bg.P1_HSC_Module.channel2" editable-label="no">
+		<BlockGenus name="P1_HSC_Module.channel2" kind="data" color="0 151 57" initlabel="bg.P1_HSC_Module.channel2" editable-label="no">
 			<description>
 				<text></text>
 			</description>
@@ -3716,7 +3752,7 @@
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>	
 		</BlockGenus>
-		<!--BlockGenus name="P1_HSC_Module.getStatus" kind="function" color="15 173 19" initlabel="bg.P1_HSC_Module.getStatus">
+		<!--BlockGenus name="P1_HSC_Module.getStatus" kind="function" color="0 151 57" initlabel="bg.P1_HSC_Module.getStatus">
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug"></BlockConnector>
 				<BlockConnector connector-type="poly-list" connector-kind="socket" label="HSC">
@@ -3724,7 +3760,7 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus-->
-		<BlockGenus name="P1_HSC_Channel" kind="data" color="15 173 19" initlabel="P1_HSC_Channel_Object" editable-label="yes">
+		<BlockGenus name="P1_HSC_Channel" kind="data" color="0 151 57" initlabel="P1_HSC_Channel_Object" editable-label="yes">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3733,7 +3769,7 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Channel_Constructor" kind="command" color="15 173 19" initlabel="bg.P1_HSC_Channel_Constructor">
+		<BlockGenus name="P1_HSC_Channel_Constructor" kind="command" color="0 151 57" initlabel="bg.P1_HSC_Channel_Constructor">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3769,7 +3805,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Channel.readPosition" kind="function" color="15 173 19" initlabel="bg.P1_HSC_Channel.readPosition">
+		<BlockGenus name="P1_HSC_Channel.readPosition" kind="function" color="0 151 57" initlabel="bg.P1_HSC_Channel.readPosition">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3785,7 +3821,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Channel.setPosition" kind="command" color="15 173 19" initlabel="bg.P1_HSC_Channel.setPosition">
+		<BlockGenus name="P1_HSC_Channel.setPosition" kind="command" color="0 151 57" initlabel="bg.P1_HSC_Channel.setPosition">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3803,7 +3839,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Channel.setRolloverPosition" kind="command" color="15 173 19" initlabel="bg.P1_HSC_Channel.setRolloverPosition">
+		<BlockGenus name="P1_HSC_Channel.setRolloverPosition" kind="command" color="0 151 57" initlabel="bg.P1_HSC_Channel.setRolloverPosition">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3821,7 +3857,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Channel.setZResetValue" kind="command" color="15 173 19" initlabel="bg.P1_HSC_Channel.setZResetValue">
+		<BlockGenus name="P1_HSC_Channel.setZResetValue" kind="command" color="0 151 57" initlabel="bg.P1_HSC_Channel.setZResetValue">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3839,7 +3875,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Channel.readInputs" kind="function" color="15 173 19" initlabel="bg.P1_HSC_Channel.readInputs">
+		<BlockGenus name="P1_HSC_Channel.readInputs" kind="function" color="0 151 57" initlabel="bg.P1_HSC_Channel.readInputs">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3855,7 +3891,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Channel.readAlerts" kind="function" color="15 173 19" initlabel="bg.P1_HSC_Channel.readAlerts">
+		<BlockGenus name="P1_HSC_Channel.readAlerts" kind="function" color="0 151 57" initlabel="bg.P1_HSC_Channel.readAlerts">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3871,7 +3907,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Channel.readRollOver" kind="function" color="15 173 19" initlabel="bg.P1_HSC_Channel.readRollOver">
+		<BlockGenus name="P1_HSC_Channel.readRollOver" kind="function" color="0 151 57" initlabel="bg.P1_HSC_Channel.readRollOver">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3887,7 +3923,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Channel_enum1" kind="data" color="15 173 19" initlabel="bg.P1_HSC_Channel_enum1">
+		<BlockGenus name="P1_HSC_Channel_enum1" kind="data" color="0 151 57" initlabel="bg.P1_HSC_Channel_enum1">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3895,7 +3931,7 @@
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Channel_enum2" kind="data" color="15 173 19" initlabel="bg.P1_HSC_Channel_enum2">
+		<BlockGenus name="P1_HSC_Channel_enum2" kind="data" color="0 151 57" initlabel="bg.P1_HSC_Channel_enum2">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3903,7 +3939,7 @@
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Channel.getisRotary" kind="function" color="15 173 19" initlabel="bg.P1_HSC_Channel.getisRotary">
+		<BlockGenus name="P1_HSC_Channel.getisRotary" kind="function" color="0 151 57" initlabel="bg.P1_HSC_Channel.getisRotary">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3919,7 +3955,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Channel.getenableZReset" kind="function" color="15 173 19" initlabel="bg.P1_HSC_Channel.getenableReset">
+		<BlockGenus name="P1_HSC_Channel.getenableZReset" kind="function" color="0 151 57" initlabel="bg.P1_HSC_Channel.getenableReset">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3935,7 +3971,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Channel.getpolarity" kind="function" color="15 173 19" initlabel="bg.P1_HSC_Channel.getpolarity">
+		<BlockGenus name="P1_HSC_Channel.getpolarity" kind="function" color="0 151 57" initlabel="bg.P1_HSC_Channel.getpolarity">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3951,7 +3987,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Channel.getinhibitOn" kind="function" color="15 173 19" initlabel="bg.P1_HSC_Channel.getinhibitOn">
+		<BlockGenus name="P1_HSC_Channel.getinhibitOn" kind="function" color="0 151 57" initlabel="bg.P1_HSC_Channel.getinhibitOn">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3967,7 +4003,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Channel.getmode" kind="function" color="15 173 19" initlabel="bg.P1_HSC_Channel.getmode">
+		<BlockGenus name="P1_HSC_Channel.getmode" kind="function" color="0 151 57" initlabel="bg.P1_HSC_Channel.getmode">
 			<description>
 				<text>empty</text>
 			</description>
@@ -3983,7 +4019,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Channel.setisRotary" kind="command" color="15 173 19" initlabel="bg.P1_HSC_Channel.setisRotary">
+		<BlockGenus name="P1_HSC_Channel.setisRotary" kind="command" color="0 151 57" initlabel="bg.P1_HSC_Channel.setisRotary">
 			<description>
 				<text>empty</text>
 			</description>
@@ -4001,7 +4037,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Channel.setenableZReset" kind="command" color="15 173 19" initlabel="bg.P1_HSC_Channel.setenableReset">
+		<BlockGenus name="P1_HSC_Channel.setenableZReset" kind="command" color="0 151 57" initlabel="bg.P1_HSC_Channel.setenableReset">
 			<description>
 				<text>empty</text>
 			</description>
@@ -4019,7 +4055,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Channel.setpolarity" kind="command" color="15 173 19" initlabel="bg.P1_HSC_Channel.setpolarity">
+		<BlockGenus name="P1_HSC_Channel.setpolarity" kind="command" color="0 151 57" initlabel="bg.P1_HSC_Channel.setpolarity">
 			<description>
 				<text>empty</text>
 			</description>
@@ -4037,7 +4073,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Channel.setinhibitOn" kind="command" color="15 173 19" initlabel="bg.P1_HSC_Channel.setinhibitOn">
+		<BlockGenus name="P1_HSC_Channel.setinhibitOn" kind="command" color="0 151 57" initlabel="bg.P1_HSC_Channel.setinhibitOn">
 			<description>
 				<text>empty</text>
 			</description>
@@ -4055,7 +4091,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Channel.setmode" kind="command" color="15 173 19" initlabel="bg.P1_HSC_Channel.setmode">
+		<BlockGenus name="P1_HSC_Channel.setmode" kind="command" color="0 151 57" initlabel="bg.P1_HSC_Channel.setmode">
 			<description>
 				<text>empty</text>
 			</description>
@@ -4073,7 +4109,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Channel.stepDirection" kind="data" color="15 173 19" initlabel="bg.P1_HSC_Channel.stepDirection" editable-label="no">
+		<BlockGenus name="P1_HSC_Channel.stepDirection" kind="data" color="0 151 57" initlabel="bg.P1_HSC_Channel.stepDirection" editable-label="no">
 		<description>
 		<text></text>
 		</description>
@@ -4081,7 +4117,7 @@
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Channel.quad4x" kind="data" color="15 173 19" initlabel="bg.P1_HSC_Channel.quad4x" editable-label="no">
+		<BlockGenus name="P1_HSC_Channel.quad4x" kind="data" color="0 151 57" initlabel="bg.P1_HSC_Channel.quad4x" editable-label="no">
 		<description>
 		<text></text>
 		</description>
@@ -4089,7 +4125,7 @@
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="P1_HSC_Channel.quad1x" kind="data" color="15 173 19" initlabel="bg.P1_HSC_Channel.quad1x" editable-label="no">
+		<BlockGenus name="P1_HSC_Channel.quad1x" kind="data" color="0 151 57" initlabel="bg.P1_HSC_Channel.quad1x" editable-label="no">
 		<description>
 		<text></text>
 		</description>
@@ -4123,6 +4159,12 @@
 		
 <!-- Start of Ardublock Standard UI layout -->
 	<BlockFamilies>
+		<BlockFamily>
+			<FamilyMember>Serial.printNumber</FamilyMember>
+			<FamilyMember>Serial.printNumberBin</FamilyMember>
+			<FamilyMember>Serial.printNumberHex</FamilyMember>
+			<FamilyMember>Serial.printNumberOct</FamilyMember>
+		</BlockFamily>
 		<BlockFamily>
 			<FamilyMember>P1_HSC_Module.channel1</FamilyMember>
 			<FamilyMember>P1_HSC_Module.channel2</FamilyMember>
@@ -4208,6 +4250,8 @@
 			<FamilyMember>greater_equal</FamilyMember>
 			<FamilyMember>less_equal</FamilyMember>
 			<FamilyMember>not_equal</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>bitwise_and</FamilyMember>
 			<FamilyMember>bitwise_or</FamilyMember>
 			<FamilyMember>bitshift_left</FamilyMember>
@@ -4224,12 +4268,12 @@
 			<FamilyMember>not_equal_poly</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>string_equal</FamilyMember>
+			<FamilyMember>string_not_equal</FamilyMember>
 			<FamilyMember>string_greater</FamilyMember>
 			<FamilyMember>string_less</FamilyMember>
-			<FamilyMember>string_equal</FamilyMember>
 			<FamilyMember>string_greater_equal</FamilyMember>
 			<FamilyMember>string_less_equal</FamilyMember>
-			<FamilyMember>string_not_equal</FamilyMember>
 			<FamilyMember>string_equals</FamilyMember>
 			<FamilyMember>string_equalsIgnoreCase</FamilyMember>
 			<FamilyMember>string_compareTo</FamilyMember>
@@ -4381,6 +4425,8 @@
 				<BlockGenusMember>equal_digital</BlockGenusMember>
 				<BlockGenusMember>equal_poly</BlockGenusMember>
 				<BlockGenusMember>equal_string</BlockGenusMember>
+				<BlockGenusMember>string_add</BlockGenusMember>
+				<BlockGenusMember>bitwise_and</BlockGenusMember>
 				<BlockGenusMember>not</BlockGenusMember>
 				<BlockGenusMember>compound_bitwise_and</BlockGenusMember>
 			</BlockDrawer>
@@ -4442,17 +4488,12 @@
 				<BlockGenusMember>pinListAnalog_A0</BlockGenusMember>
 				<BlockGenusMember>pinListAnalogWrite_D3</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer button-color="0 151 157" name="bd.SerialMonitor" type="factory">
-				<BlockGenusMember>SerialMonitorStart</BlockGenusMember>
-				<BlockGenusMember>SerialMonitorprintString</BlockGenusMember>
-				<BlockGenusMember>SerialMonitorprintNumber</BlockGenusMember>
-				<BlockGenusMember>SerialMonitorprintChar</BlockGenusMember>
-			</BlockDrawer>
 			<BlockDrawer button-color="0 151 157" name="bd.Serial" type="factory">
 				<BlockGenusMember>Serial.begin</BlockGenusMember>
 				<BlockGenusMember>Serial.printString</BlockGenusMember>
 				<BlockGenusMember>Serial.printNumber</BlockGenusMember>
 				<BlockGenusMember>Serial.printChar</BlockGenusMember>
+				<BlockGenusMember>Serial.printBool</BlockGenusMember>
 				<BlockGenusMember>Serial_is_open</BlockGenusMember>
 				<BlockGenusMember>Serial.end</BlockGenusMember>			
 				<BlockGenusMember>Serial.flush</BlockGenusMember>
@@ -4477,7 +4518,7 @@
 				<BlockGenusMember>raw_code</BlockGenusMember>
 				<BlockGenusMember>definition_block</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer button-color="15 173 19" name="bd.P1_init" type="factory">
+			<BlockDrawer button-color="0 151 57" name="bd.P1_init" type="factory">
 				<BlockGenusMember>P1_program</BlockGenusMember>
 				<BlockGenusMember>P1Autoinit</BlockGenusMember>
 				<BlockGenusMember>rollCall</BlockGenusMember>
@@ -4488,7 +4529,7 @@
 				<BlockGenusMember>petWD</BlockGenusMember>
 				<BlockGenusMember>spacer2</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer button-color="15 173 19" name="bd.P1_CPU">
+			<BlockDrawer button-color="0 151 57" name="bd.P1_CPU">
 				<BlockGenusMember>getFwVersion</BlockGenusMember>
 				<BlockGenusMember>RSS</BlockGenusMember>
 				<BlockGenusMember>LED</BlockGenusMember>
@@ -4496,7 +4537,7 @@
 				<BlockGenusMember>runstopswitch</BlockGenusMember>
 				<BlockGenusMember>writeled</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer button-color="15 173 19" name="bd.P1_config" type="factory">
+			<BlockDrawer button-color="0 151 57" name="bd.P1_config" type="factory">
 				<BlockGenusMember>readStatus</BlockGenusMember>
 				<BlockGenusMember>AD_chan_config</BlockGenusMember>
 				<BlockGenusMember>_04AD_config</BlockGenusMember>
@@ -4505,7 +4546,7 @@
 				<BlockGenusMember>_04RTD_config</BlockGenusMember>
 				<BlockGenusMember>_4ADL2DAL_config</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer button-color="15 173 19" name="bd.P1_IO" type="factory">
+			<BlockDrawer button-color="0 151 57" name="bd.P1_IO" type="factory">
 				<BlockGenusMember>P1_blink</BlockGenusMember>
 				<BlockGenusMember>readDiscrete</BlockGenusMember>
 				<BlockGenusMember>writeDiscrete</BlockGenusMember>
@@ -4515,7 +4556,7 @@
 				<BlockGenusMember>writeAnalog</BlockGenusMember>
 				<BlockGenusMember>readTemperature</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer button-color="15 173 19" name="bd.HSC">
+			<BlockDrawer button-color="0 151 57" name="bd.HSC">
 				<BlockGenusMember>P1_HSC_Module_Constructor</BlockGenusMember>
 				<BlockGenusMember>P1_HSC</BlockGenusMember>
 				<BlockGenusMember>P1_HSC_Module.configureChannels</BlockGenusMember>
@@ -4533,7 +4574,7 @@
 				<BlockGenusMember>P1_HSC_Module.channel1</BlockGenusMember>
 				<BlockGenusMember>P1_HSC_Channel.stepDirection</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer button-color="15 173 19" name="bd.P1_PWM" type="factory">
+			<BlockDrawer button-color="0 151 57" name="bd.P1_PWM" type="factory">
 				<BlockGenusMember>PWM_config</BlockGenusMember>
 				<BlockGenusMember>writePWM</BlockGenusMember>
 				<BlockGenusMember>writePWMDuty</BlockGenusMember>

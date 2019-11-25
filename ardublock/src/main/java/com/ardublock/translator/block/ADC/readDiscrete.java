@@ -16,14 +16,10 @@ public class readDiscrete extends TranslatorBlock {
 		public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 		{
 			String slot;
-			String channelNumber ;
 			
 			TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 			slot = translatorBlock.toCode();
 			
-			translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
-			channelNumber = translatorBlock.toCode();
-			
-			return codePrefix + "P1.readDiscrete("+slot+", "+channelNumber+")" + codeSuffix ;	
+			return codePrefix + "P1.readDiscrete(" + slot + ", 0)" + codeSuffix ;	
 		}
 }

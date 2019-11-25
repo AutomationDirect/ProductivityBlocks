@@ -266,7 +266,7 @@ public class OpenblocksFrame extends JFrame
         
         
 		//set up text fields
-		JLabel versionLabel = new JLabel("ProductivityBlocks Version: " + uiMessageBundle.getString("problocks.ui.version"));
+		JLabel versionLabel = new JLabel("Version: " + uiMessageBundle.getString("problocks.ui.version"));
 		versionLabel.setForeground(arduinoColor);
 		versionLabel.setFont(new Font("Courier New",Font.PLAIN,12));
 		versionLabel.setPreferredSize(new Dimension(aboutDialogDimension.width,20));
