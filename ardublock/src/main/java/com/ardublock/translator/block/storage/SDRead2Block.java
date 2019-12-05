@@ -38,6 +38,6 @@ public class SDRead2Block extends TranslatorBlock
 		translator.addDefinitionCommand(SDReadRoutine);
 		translator.addHeaderFile("SD.h");
 	    translator.addSetupCommand("SD.begin("+ Cs +");\n");
-        return codePrefix + "__ProBlocksSDRead(\""+ fileName +"\", " + seek + ", " + readLength +", " + Cs + ")" + codeSuffix;
+        return codePrefix + "__ProBlocksSDRead(" + fileName + ", " + seek + ", " + readLength +", " + Cs + ")" + codeSuffix;
 	}
 }

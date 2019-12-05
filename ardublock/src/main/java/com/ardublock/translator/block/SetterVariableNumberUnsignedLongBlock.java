@@ -20,7 +20,7 @@ public class SetterVariableNumberUnsignedLongBlock extends TranslatorBlock
   public String toCode() throws SocketNullException, SubroutineNotDeclaredException
   {
     TranslatorBlock tb = this.getRequiredTranslatorBlockAtSocket(0);
-    if (!(tb instanceof VariableNumberUnsignedLongBlock)) {
+    if (!(tb instanceof VariableNumberUnsignedLongBlock) && !(tb instanceof cppVar)) {
       throw new BlockException(blockId, uiMessageBundle.getString("ardublock.error_msg.long_number_var_slot"));
     }
     

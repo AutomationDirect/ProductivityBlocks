@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -17,6 +18,7 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 import processing.app.Editor;
@@ -24,6 +26,8 @@ import processing.app.Editor;
 import com.ardublock.ui.listener.OpenblocksFrameListener;
 
 import edu.mit.blocks.codeblocks.Block;
+import edu.mit.blocks.codeblocks.BlockLink;
+import edu.mit.blocks.codeblocks.BlockLinkChecker;
 import edu.mit.blocks.controller.WorkspaceController;
 import edu.mit.blocks.renderable.BlockUtilities;
 import edu.mit.blocks.renderable.FactoryRenderableBlock;
@@ -170,21 +174,27 @@ public class Context
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			workspaceController.loadFreshWorkspace();
-		}
-        */
-		
+		}*/
+		/*try {
+			workspaceController.resetWorkspace();
+			workspaceController.loadProjectFromPath("C:\\Users\\proberts\\Documents\\GitHub\\ProductivityBlocks\\ardublock\\src\\main\\resources\\com\\ardublock\\default.abp");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
 		Workspace workspace = workspaceController.getWorkspace();
 		Page page = workspace.getPageNamed("Main");
 		
 		FactoryManager manager = workspace.getFactoryManager();
 		Block newBlock;
-        newBlock = new Block(workspace, "P1_program", false);
+        newBlock = new Block(workspace, "P1_program");
         FactoryRenderableBlock factoryRenderableBlock = new FactoryRenderableBlock(workspace, manager, newBlock.getBlockID());
         RenderableBlock renderableBlock = factoryRenderableBlock.createNewInstance();
+
         renderableBlock.setLocation(100, 100);
+
         page.addBlock(renderableBlock);
-        
-        
+
 	}
 	
 	//determine OS

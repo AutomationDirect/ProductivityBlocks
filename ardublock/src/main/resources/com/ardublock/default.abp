@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <cb:CODEBLOCKS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://education.mit.edu/openblocks/ns http://education.mit.edu/openblocks/codeblocks.xsd" xmlns:cb="http://education.mit.edu/openblocks/ns">
 <Pages collapsible-pages="yes" drawer-with-page="yes">
-<Page page-color="160 160 160" page-drawer="Main" page-infullview="yes" page-name="Main" page-width="1600">
+<Page page-color="250 250 250" page-drawer="Main" page-infullview="yes" page-name="Main" page-width="1920">
 <PageBlocks>
-<Block genus-name="loop" id="293">
+<Block genus-name="P1Autoinit" id="445" is-raw-code-block="no">
 <Location>
-<X>130</X>
-<Y>75</Y>
+<X>129</X>
+<Y>28</Y>
 </Location>
-<Sockets num-sockets="1">
-<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="执行" position-type="single"/>
+<BeforeBlockId>444</BeforeBlockId>
+</Block>
+<Block genus-name="program" id="444" is-raw-code-block="no">
+<Location>
+<X>20</X>
+<Y>20</Y>
+</Location>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="445" connector-kind="socket" connector-type="cmd" init-type="cmd" label="setup" position-type="single"/>
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="loop" position-type="single"/>
 </Sockets>
 </Block>
 </PageBlocks>

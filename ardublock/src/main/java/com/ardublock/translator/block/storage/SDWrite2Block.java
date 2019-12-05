@@ -35,6 +35,6 @@ public class SDWrite2Block extends TranslatorBlock
 	    translator.addSetupCommand("SD.begin(" + Cs +");\n");
 	    translator.addDefinitionCommand(SDWriteRoutine);
 	    
-		return  "__ProBlocksSDWrite(\"" + fileName + "\", " + writeString + ", " + newLine + ", " + Cs + ");";
+		return  "__ProBlocksSDWrite(" + fileName + ", " + writeString + ", " + newLine + ", " + Cs + ");";
 	}
 }

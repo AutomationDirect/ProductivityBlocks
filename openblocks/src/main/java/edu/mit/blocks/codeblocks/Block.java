@@ -1447,11 +1447,15 @@ public class Block implements ISupportMemento {
             if (nameMatcher.find()) {
                 genusName = nameMatcher.group(1);
             }
-            if(node.getAttributes().getNamedItem("is-raw-code-block").toString() != null) {
+            try {
                 nameMatcher = attrExtractor.matcher(node.getAttributes().getNamedItem("is-raw-code-block").toString());
                 if(nameMatcher.find()) {
                 	isCodeBlock = (nameMatcher.group(1).equals("yes"));
                 }
+            }
+            catch (Exception e)
+            {
+            	;
             }
             //load optional items
             Node opt_item = node.getAttributes().getNamedItem("has-focus");

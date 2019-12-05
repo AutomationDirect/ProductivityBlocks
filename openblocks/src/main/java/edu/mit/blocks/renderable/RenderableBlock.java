@@ -30,6 +30,7 @@ import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JComponent;
 import javax.swing.JToolTip;
+import javax.swing.ToolTipManager;
 import javax.swing.KeyStroke;
 import javax.swing.SwingUtilities;
 
@@ -211,7 +212,8 @@ public class RenderableBlock extends JComponent implements SearchableElement,
 		 * events for focus traversal keys.
 		 */
 		this.setFocusTraversalKeysEnabled(false);
-
+		ToolTipManager.sharedInstance().setDismissDelay(30000);
+		ToolTipManager.sharedInstance().setInitialDelay(500);
 		this.parent = parent;
 		this.blockID = blockID;
 		workspace.getEnv().addRenderableBlock(this);
@@ -1844,7 +1846,7 @@ public class RenderableBlock extends JComponent implements SearchableElement,
 	}
 
 	// /////////////////
-	// MOUSE EVENTS //
+	// MOUSE EVENTS   //
 	// /////////////////
 	/**
 	 * Makes public the protected processMouseEvent() method from Component so

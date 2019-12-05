@@ -150,7 +150,9 @@ public class WorkspaceController {
             }
         }
     }
-
+    public Element getLangRoot() {
+    	return this.langDefRoot;
+    }
     /**
      * Sets language definition file from the given input stream
      * @param in input stream to read

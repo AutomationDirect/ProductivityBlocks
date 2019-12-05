@@ -1,13 +1,19 @@
 package com.ardublock.ui.listener;
 
+import java.awt.BorderLayout;
+import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashSet;
 import java.util.ResourceBundle;
 import java.util.Set;
 
+import javax.swing.BoxLayout;
+import javax.swing.JCheckBox;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 import com.ardublock.core.Context;
 import com.ardublock.translator.AutoFormat;
@@ -28,6 +34,7 @@ public class GenerateCodeButtonListener implements ActionListener
 	private Workspace workspace; 
 	private ResourceBundle uiMessageBundle;
 	private boolean verifyOnly = false;
+	private final String uploadWarning = "Uploading a program will wipe any existing program from the connected Arduino.";
 	
 	public GenerateCodeButtonListener(JFrame frame, Context context, boolean verifyOnly)
 	{
@@ -37,9 +44,60 @@ public class GenerateCodeButtonListener implements ActionListener
 		uiMessageBundle = ResourceBundle.getBundle("com/ardublock/block/ardublock");
 		this.verifyOnly = verifyOnly;
 	}
-	
+	//CHANGED
+	public static class UploadWarning extends JPanel {
+
+	    /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private JCheckBox dontAskMeAgain;
+	    private static boolean askAgain = true;
+	    
+	    public UploadWarning(Object message) {
+	        setLayout(new BorderLayout());
+	        if (message instanceof Component) {
+	            add((Component) message);
+	        } else if (message != null) {
+	            add(new JLabel(message.toString()));
+	        }
+	        dontAskMeAgain = new JCheckBox("Don't ask me again");
+	        JPanel panel = new JPanel();
+	        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+	        panel.add(new JLabel("Do you want to continue?"));
+	        panel.add(new JLabel(" "));
+	        panel.add(dontAskMeAgain);
+	        add(panel, BorderLayout.SOUTH);
+	    }
+
+	    public boolean dontAskMeAgain() {
+	        return dontAskMeAgain.isSelected();
+	    }
+
+	    public static int showConfirmDialog(Component parent, Object message) {
+
+	        int result = JOptionPane.NO_OPTION;
+
+	        if (!askAgain) {
+	            result = JOptionPane.OK_OPTION;
+	        } else {
+	            UploadWarning panel = new UploadWarning(message);
+	            result = JOptionPane.showConfirmDialog(parent, panel);
+	            if (panel.dontAskMeAgain()) {
+	            	askAgain = false;
+	            }
+	        }
+	        return result;
+	    }
+	}
 	public void actionPerformed(ActionEvent e)
 	{
+		if(!verifyOnly) {
+			if(JOptionPane.OK_OPTION != UploadWarning.showConfirmDialog(parentFrame, uploadWarning)) {
+				return;
+			}	
+		}
+		
 		boolean success;
 		success = true;
 		Translator translator = new Translator(workspace);

@@ -19,7 +19,7 @@ public class SetterVariableDigitalBlock extends TranslatorBlock
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 		TranslatorBlock tb = this.getRequiredTranslatorBlockAtSocket(0);
-		if (!(tb instanceof VariableDigitalBlock)) {
+		if (!(tb instanceof VariableDigitalBlock) && !(tb instanceof cppVar)) {
 			throw new BlockException(blockId, uiMessageBundle.getString("ardublock.error_msg.digital_var_slot"));
 		}
 		

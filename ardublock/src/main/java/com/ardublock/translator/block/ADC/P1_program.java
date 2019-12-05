@@ -41,29 +41,23 @@ public class P1_program extends TranslatorBlock
 		this.setupCommand.add(ret);
 		
 		translator.registerBodyTranslateFinishCallback(this);
-		translator.addDefinitionCommand(runstopswitch.ARDUBLOCK_DIGITAL_READ_DEFINE);
 
 		ret="";
-		ret = "void loop()\n{\n"
-				+ "if(" + runstopswitch.callString + ")\n{\n";
-		TranslatorBlock translatorBlock2 = getTranslatorBlockAtSocket(2);
+		ret = "void loop()\n{\n";
+		TranslatorBlock translatorBlock2 = getTranslatorBlockAtSocket(1);
 		while (translatorBlock2 != null)
 		{
 			
 			ret = ret + translatorBlock2.toCode();
 			translatorBlock2 = translatorBlock2.nextTranslatorBlock();
 		}
-		ret += "\n}\n else \n{\n";
-		TranslatorBlock translatorBlock3 = getTranslatorBlockAtSocket(3);
-		while (translatorBlock3 != null)
-		{
-			
-			ret = ret + translatorBlock3.toCode();
-			translatorBlock3 = translatorBlock3.nextTranslatorBlock();
-		}
-		ret = ret + "}\n";
 		
-		ret += "}\n";
+		if (translator.isScoopProgram())
+		{
+			ret += "yield();\n";
+		}
+		
+		ret = ret + "}\n\n";
 		return ret;
 	}
 	

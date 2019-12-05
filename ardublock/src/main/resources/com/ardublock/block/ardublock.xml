@@ -95,24 +95,16 @@
 		<BlockGenus name="P1_program" kind="command" color="0 151 57" initlabel="bg.P1_program" is-starter="yes" is-terminator="yes" label-unique="no">
 			<description>
 				<text>this is the loop of the arduino</text>
-				<arg-description n="2" name="setup">
+				<arg-description n="1" name="setup">
 					A list of commands to run first, and once only.
 				</arg-description>
-				<arg-description name="" n=""></arg-description>
-				<arg-description n="3" name="run">
-					Loop through these commands when condition is true (default when CPU switch is on).
-				</arg-description>
-				<arg-description name="stop" n="4">
-					Loop through these commands when condition is false (default when CPU switch is off). 
+				<arg-description n="2" name="start">
+					A list of commands to repeat forever, after setup commands have finished.
 				</arg-description>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="cmd" connector-kind="socket" label="bc.setup" />
-				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.loop_condition">
-					<DefaultArg genus-name="runstopswitch" label="CPU Switch"/>
-				</BlockConnector>
-				<BlockConnector connector-type="cmd" connector-kind="socket" label="run" />
-				<BlockConnector connector-type="cmd" connector-kind="socket" label="stop" />
+				<BlockConnector connector-type="cmd" connector-kind="socket" label="bc.loop" />
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -2124,6 +2116,30 @@
 				<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
+		
+		<BlockGenus name="itos" kind="function" color="100 100 100" initlabel="bg.itos" editable-label="no">
+			<description>
+				<text>string message</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug"/>
+				<BlockConnector connector-type="number" connector-kind="socket">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="btos" kind="function" color="100 100 100" initlabel="bg.btos" editable-label="no">
+			<description>
+				<text>string message</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug"/>
+				<BlockConnector connector-type="boolean" connector-kind="socket">
+					<DefaultArg genus-name="digital-high" label="HIGH"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
 
 
 		<!-- ******************** Storage *************** -->
@@ -2211,7 +2227,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="string" connector-kind="socket" label="File">
-					<DefaultArg genus-name="glue_msg" label="file.txt" />
+					<DefaultArg genus-name="message" label="file.txt" />
 				</BlockConnector>
 				<BlockConnector connector-type="string" connector-kind="socket" label="Data">
 					<DefaultArg genus-name="message" label="Message" />
@@ -2232,7 +2248,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="string" connector-kind="plug"></BlockConnector>
 				<BlockConnector connector-type="string" connector-kind="socket" label="File">
-					<DefaultArg genus-name="glue_msg" label="file.txt" />
+					<DefaultArg genus-name="message" label="file.txt" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Seek">
 					<DefaultArg genus-name="number" label="0" />
@@ -2296,6 +2312,7 @@
 				</BlockConnector>
 			</BlockConnectors-->
 		</BlockGenus>
+		
 		<BlockGenus name="code_line" kind="command" color="125 125 125" initlabel="bg.code_line">
 			<description>
 				<text>send message via Serial port</text>
@@ -2316,6 +2333,52 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
+		
+		<BlockGenus name="cpp_variable_number" kind="data" initlabel="bg.cpp_variable_number" editable-label="yes" is-label-value="yes" color="125 125 125">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="cpp_variable_digital" kind="data" initlabel="bg.cpp_variable_digital" editable-label="yes" is-label-value="yes" color="125 125 125">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="cpp_variable_string" kind="data" initlabel="bg.cpp_variable_string" editable-label="yes" is-label-value="yes" color="125 125 125">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="cpp_variable_char" kind="data" initlabel="bg.cpp_variable_char" editable-label="yes" is-label-value="yes" color="125 125 125">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="poly" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		
 		<!-- ******************** Unused/Obsoletes *************** -->
 		<BlockGenus name="glue_msg" kind="data" color="100 100 100" initlabel="bg.glue_msg" editable-label="yes">
 			<description>
@@ -3013,7 +3076,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="value">
-					<DefaultArg genus-name="true" label="true"/>
+					<DefaultArg genus-name="digital-high" label="HIGH"/>
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -4135,7 +4198,7 @@
 		</BlockGenus>
 		<!-- END HSC BLOCKS -->
 		
-		<BlockGenus name="comment" kind="command" color="120 120 120" initlabel="bg.comment" editable-label="yes">
+		<BlockGenus name="comment" kind="command" color="220 220 0" initlabel="bg.comment" editable-label="yes">
 			<description>
 				<text>comment</text>
 			</description>
@@ -4406,7 +4469,6 @@
 				<BlockGenusMember>program</BlockGenusMember>
 				<BlockGenusMember>subroutine</BlockGenusMember>
 				<BlockGenusMember>subroutine-ref</BlockGenusMember>
-				<BlockGenusMember>spacer</BlockGenusMember>
 				<!--BlockGenusMember>subroutine_var</BlockGenusMember>
 				<BlockGenusMember>subroutine-ref_var</BlockGenusMember-->
 			</BlockDrawer>
@@ -4428,6 +4490,8 @@
 				<BlockGenusMember>string_add</BlockGenusMember>
 				<BlockGenusMember>bitwise_and</BlockGenusMember>
 				<BlockGenusMember>not</BlockGenusMember>
+				<BlockGenusMember>itos</BlockGenusMember>
+				<BlockGenusMember>btos</BlockGenusMember>
 				<BlockGenusMember>compound_bitwise_and</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="0 160 200" name="bd.operators" type="factory">
@@ -4516,6 +4580,10 @@
 			<BlockDrawer button-color="120 120 120" name="bd.codeblocks" type="factory">
 				<BlockGenusMember>code_line</BlockGenusMember>
 				<BlockGenusMember>raw_code</BlockGenusMember>
+				<BlockGenusMember>cpp_variable_number</BlockGenusMember>
+				<BlockGenusMember>cpp_variable_digital</BlockGenusMember>
+				<BlockGenusMember>cpp_variable_string</BlockGenusMember>
+				<BlockGenusMember>cpp_variable_char</BlockGenusMember>
 				<BlockGenusMember>definition_block</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="0 151 57" name="bd.P1_init" type="factory">
@@ -4527,7 +4595,6 @@
 				<BlockGenusMember>startWD</BlockGenusMember>
 				<BlockGenusMember>stopWD</BlockGenusMember>
 				<BlockGenusMember>petWD</BlockGenusMember>
-				<BlockGenusMember>spacer2</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="0 151 57" name="bd.P1_CPU">
 				<BlockGenusMember>getFwVersion</BlockGenusMember>
@@ -4586,6 +4653,8 @@
 				<BlockGenusMember>comment2</BlockGenusMember>
 				<BlockGenusMember>comment3</BlockGenusMember>
 				<BlockGenusMember>comment4</BlockGenusMember>
+				<BlockGenusMember>spacer</BlockGenusMember>
+				<BlockGenusMember>spacer2</BlockGenusMember>
 			</BlockDrawer>
 		</BlockDrawerSet>
 	</BlockDrawerSets>
