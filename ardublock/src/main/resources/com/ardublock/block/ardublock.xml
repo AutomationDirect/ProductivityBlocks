@@ -2060,7 +2060,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="variable_poly" kind="data" initlabel="bg.variable_poly" editable-label="yes" is-label-value="yes" color="221 56 50">
+		<BlockGenus name="variable_poly" kind="data" initlabel="bg.variable_poly" editable-label="yes" is-label-value="yes" color="200 56 50">
 			<description>
 				<text>
 					character variable
@@ -2344,7 +2344,7 @@
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
-		
+
 		<BlockGenus name="cpp_variable_digital" kind="data" initlabel="bg.cpp_variable_digital" editable-label="yes" is-label-value="yes" color="125 125 125">
 			<description>
 				<text>
@@ -2355,7 +2355,7 @@
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
-		
+
 		<BlockGenus name="cpp_variable_string" kind="data" initlabel="bg.cpp_variable_string" editable-label="yes" is-label-value="yes" color="125 125 125">
 			<description>
 				<text>
@@ -4611,7 +4611,6 @@
 				<BlockGenusMember>_04THM_config</BlockGenusMember>
 				<BlockGenusMember>_04NTC_config</BlockGenusMember>
 				<BlockGenusMember>_04RTD_config</BlockGenusMember>
-				<BlockGenusMember>_4ADL2DAL_config</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="0 151 57" name="bd.P1_IO" type="factory">
 				<BlockGenusMember>P1_blink</BlockGenusMember>

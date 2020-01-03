@@ -93,6 +93,7 @@ public class OpenblocksFrame extends JFrame
 	private ResourceBundle uiMessageBundle;
 	private JFrame aboutDialog;
 	private URL iconURL;
+	private String fileSuffix;
 	
 	public void addListener(OpenblocksFrameListener ofl)
 	{
@@ -121,8 +122,9 @@ public class OpenblocksFrame extends JFrame
 		
 		uiMessageBundle = ResourceBundle.getBundle("com/ardublock/block/ardublock");
 		//fileChooser setup
+		fileSuffix = uiMessageBundle.getString("problocks.file.suffix");
 		fileChooser = new JFileChooser();
-		ffilter = new FileNameExtensionFilter(uiMessageBundle.getString("ardublock.file.suffix"), "abp");
+		ffilter = new FileNameExtensionFilter("ProductivityBlocks Program File(*" + fileSuffix +")" , fileSuffix.replace(".", ""));
 		fileChooser.setFileFilter(ffilter);
 		fileChooser.addChoosableFileFilter(ffilter);
 		//save Image FileChooser setup
@@ -192,7 +194,7 @@ public class OpenblocksFrame extends JFrame
 				
 				workspace.getBlockCanvas().getPageAt(0).getJComponent().paint(g);
 				try{
-					saveImageFileChooser.setSelectedFile(new File("problocks_" + context.getSaveFileName().replace(".abp", "") +"_capture.png"));
+					saveImageFileChooser.setSelectedFile(new File("problocks_" + context.getSaveFileName().replace(".apb", "") +"_capture.png"));
 					int returnVal = saveImageFileChooser.showSaveDialog(workspace.getBlockCanvas().getJComponent());
 			        if (returnVal == JFileChooser.APPROVE_OPTION) {
 			            File file = saveImageFileChooser.getSelectedFile();
@@ -655,13 +657,13 @@ public class OpenblocksFrame extends JFrame
 			return saveFile;
 		}
 		String filePath = saveFile.getAbsolutePath();
-		if (filePath.endsWith(".abp"))
+		if (filePath.endsWith(fileSuffix))
 		{
 			return saveFile;
 		}
 		else
 		{
-			return new File(filePath + ".abp");
+			return new File(filePath + fileSuffix);
 		}
 	}
 	

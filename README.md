@@ -16,6 +16,7 @@ ProductivityBlocks is a tool for the Arduino software, and will not work properl
 3. Run the installer as an administrator.
 
     ![](images/runasadmin.png)
+
 3. Open/reopen the Arduino Editor and check for ProductivityBlocks in the tools menu.
 
     ![](images/selectproductivityblocks.png)
@@ -45,7 +46,7 @@ When the program is ready, use the 'Upload' button to push the program to a conn
 
 # Basic Block Programming
 
-Each block represents a piece of a full program. There a few special blocks that represent the full c++ program:
+Each block represents a piece of a full program. There a few special blocks that represent the basis of the program:
 
 **Loop**
 
@@ -59,20 +60,21 @@ Each block represents a piece of a full program. There a few special blocks that
 
 ![](images/p1_programblock.png)
 
-Block programs may only have one of these blocks in the main canvas, otherwise the program will not be able to verify or compile. After placing one of these blocks on the main canvas, the program can be created by snapping new blocks onto its connectors. 
+Block programs may only have one of these blocks in the main canvas, otherwise the program will not be able to 'verify' or 'upload'. After placing one of these blocks on the main canvas, the rest of the program can be created by snapping new blocks onto its connectors. 
 
 ## Basic Block Types
 
 There are four different kinds of blocks:
+
 -**Program**: Contains the c++ program to be loaded onto an Arduino board (as described above).
 
-![](images/p1_program.png)
+![](images/p1_programblock.png)
 
--**Command**: An operation to be done in the program.
+-**Command**: A process to be done in the program.
 
 ![](images/digitalwrite_1.png) ![](images/monitorprintscreen.png)
 
--**Function**: An operation that returns a value to be used in the program.
+-**Function**: A process that returns a value to be used in the program.
 
 ![](images/digitalread_1.png) ![](images/analogread_1.png)
 
@@ -85,9 +87,13 @@ There are four different kinds of blocks:
 There are 5 different basic data types in ProductivityBlocks:
 
 -**Integer**
+
 -**Long Integer**
+
 -**Boolean**
+
 -**Character**
+
 -**String** 
 
 ![](images/variablesandconstants.png)
