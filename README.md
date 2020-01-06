@@ -4,7 +4,7 @@ ProductivityBlocks is an open source block programming tool for the [Arduino Edi
 
 ## Installation
 Before installing ProductivityBlocks, please install the [Arduino Editor](https://www.arduino.cc/en/Main/Software).
-ProductivityBlocks is a tool for the Arduino software, and will not work properly unless the Arduino software is installed.
+ProductivityBlocks is a tool for the Arduino Editor, and will not work properly unless the editor is installed.
 
 ### Windows:
 
@@ -20,6 +20,16 @@ ProductivityBlocks is a tool for the Arduino software, and will not work properl
 3. Open/reopen the Arduino Editor and check for ProductivityBlocks in the tools menu.
 
     ![](images/selectproductivityblocks.png)
+
+### Mac
+
+1. Download the latest ProductivityBlocks installer for Mac from the [Releases](https://github.com/adcpblocks/ProductivityBlocks/releases).
+
+2. If you have the Arduino Editor running, right click the icon and 'quit' the program.
+
+3. Run the installer.
+
+4. Open/reopen the Arduino Editor and check for ProductivityBlocks in the tools menu.
 
 # Getting Started
 
