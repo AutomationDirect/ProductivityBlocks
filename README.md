@@ -21,7 +21,7 @@ ProductivityBlocks is a tool for the Arduino Editor, and will not work properly 
 
     ![](images/selectproductivityblocks.png)
 
-### Mac
+### Mac:
 
 1. Download the latest ProductivityBlocks installer for Mac from the [Releases](https://github.com/adcpblocks/ProductivityBlocks/releases).
 
@@ -33,7 +33,7 @@ ProductivityBlocks is a tool for the Arduino Editor, and will not work properly 
 
 # Getting Started
 
-ProductivityBlocks is a graphical block programming tool that writes c++ code to the Arduino software. 
+ProductivityBlocks is a graphical block programming tool that writes c++ code to the Arduino editor. 
 
 ![](images/startscreen.png)
 
@@ -78,7 +78,7 @@ There are four different kinds of blocks:
 
 -**Program**: Contains the c++ program to be loaded onto an Arduino board (as described above).
 
-![](images/p1_programblock.png)
+![](images/p1_programblock.png) ![](images/programblock.png)
 
 -**Command**: A process to be done in the program.
 
@@ -111,3 +111,6 @@ There are 5 different basic data types in ProductivityBlocks:
 Each type has a variable block to go with it. Variables can have a user-defined name and can be set using the ‘set variable’ blocks:
 
 ![](images/setinteger.png)
+
+## Documentation:
+To learn more about programming in ProductivityBlocks, visit the [ProductivityBlocks Wiki](https://github.com/AutomationDirect/ProductivityBlocks/wiki).
