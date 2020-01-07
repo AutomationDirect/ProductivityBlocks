@@ -394,6 +394,35 @@ public class OpenblocksFrame extends JFrame
 		    }
 		});
 		
+		final String repoPath = "https://github.com/AutomationDirect/ProductivityBlocks";
+		JLabel repoHyperlink = new JLabel(repoPath);
+		repoHyperlink.setForeground(arduinoColor);
+		repoHyperlink.addMouseListener(new MouseAdapter() {
+			 
+		    @Override
+		    public void mouseClicked(MouseEvent e) {
+			    Desktop desktop = Desktop.isDesktopSupported() ? Desktop.getDesktop() : null;
+			    URL url;
+			    if (desktop != null && desktop.isSupported(Desktop.Action.BROWSE)) {
+			        try {
+						url = new URL(repoPath);
+			            desktop.browse(url.toURI());
+			        } catch (Exception e1) {
+			            e1.printStackTrace();
+			        }
+			    }
+		    }
+		 
+		    @Override
+		    public void mouseEntered(MouseEvent e) {
+
+		    }
+		 
+		    @Override
+		    public void mouseExited(MouseEvent e) {
+
+		    }
+		});
 		
 		//add components to aboutDialog
 		JPanel aboutPanel = new JPanel();
@@ -404,7 +433,7 @@ public class OpenblocksFrame extends JFrame
 		hyperlinkPanel.setLayout(new BoxLayout(hyperlinkPanel, BoxLayout.Y_AXIS));
 		hyperlinkPanel.add(new JLabel("Links:"));
 		hyperlinkPanel.add(gnuHyperlink);
-		hyperlinkPanel.add(new JLabel("SOURCE CODE LINK TBD."));
+		hyperlinkPanel.add(repoHyperlink);
 		hyperlinkPanel.add(ardublocksHyperlink);
 		hyperlinkPanel.add(websiteHyperlink);
 		aboutPanel.add(hyperlinkPanel);
