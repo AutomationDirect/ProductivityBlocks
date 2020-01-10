@@ -4,7 +4,7 @@ ProductivityBlocks is an open source block programming tool for the [Arduino Edi
 
 ProductivityBlocks is based on the [ardublock](https://github.com/taweili/ardublock) project.
 ## Installation
-Before installing ProductivityBlocks, please install the [Arduino Editor](https://www.arduino.cc/en/Main/Software).
+**Before installing ProductivityBlocks**, please install the [Arduino Editor](https://www.arduino.cc/en/Main/Software).
 ProductivityBlocks is a tool for the Arduino Editor, and will not work properly unless the editor is installed.
 
 ### Windows:
@@ -32,5 +32,6 @@ ProductivityBlocks is a tool for the Arduino Editor, and will not work properly 
 
 4. Open/reopen the Arduino Editor and check for ProductivityBlocks in the tools menu.
 
-## Documentation:
+----
+## Documentation
 To learn about programming in ProductivityBlocks, visit the [ProductivityBlocks Wiki](https://github.com/AutomationDirect/ProductivityBlocks/wiki).
