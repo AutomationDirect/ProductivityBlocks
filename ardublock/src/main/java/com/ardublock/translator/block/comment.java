@@ -15,6 +15,6 @@ public class comment extends TranslatorBlock
 	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-		return "\n\\\\" + label + "\n";
+		return "\n//" + label + "\n";
 	}
 }
