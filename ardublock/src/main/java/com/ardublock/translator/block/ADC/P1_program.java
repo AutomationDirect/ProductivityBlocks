@@ -6,6 +6,9 @@ import java.util.ResourceBundle;
 
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.TranslatorBlock;
+import com.ardublock.translator.block.TrueBlock;
+import com.ardublock.translator.block.FalseBlock;
+import com.ardublock.translator.block.exception.BlockException;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
@@ -25,14 +28,25 @@ public class P1_program extends TranslatorBlock
 	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-	    //initialize the P1 modules
-		translator.addHeaderFile("P1AM.h");
-		translator.addHeaderFile("P1_HSC.h");
-		translator.addPreprocessorCommand(P1Autoinit.ProBlocksInfoString);
-		this.setupCommand.add("while(!P1.init())\n{\n}\n");
-		
-	    String ret="";
 		TranslatorBlock translatorBlock = getTranslatorBlockAtSocket(0);
+		//check if the first argument is true or false:
+		boolean usep1mod = true;
+		if(!(translatorBlock instanceof TrueBlock) && !(translatorBlock instanceof FalseBlock)) {
+			throw new BlockException(blockId, "The 'Use P1 Modules' option must be 'true' or 'false' block.");
+		}
+		if(translatorBlock instanceof FalseBlock) {
+			usep1mod = false;
+		}
+		
+	    //initialize the P1 modules
+		translatorBlock = this.getTranslatorBlockAtSocket(1);
+		if (usep1mod) {
+			translator.addHeaderFile("P1AM.h");
+			translator.addHeaderFile("P1_HSC.h");
+			translator.addPreprocessorCommand(P1Autoinit.ProBlocksInfoString);
+			this.setupCommand.add("while(!P1.init())\n{\n}\n");
+		}
+	    String ret="";
 		while (translatorBlock != null)
 		{
 			ret += translatorBlock.toCode();
@@ -44,7 +58,7 @@ public class P1_program extends TranslatorBlock
 
 		ret="";
 		ret = "void loop()\n{\n";
-		TranslatorBlock translatorBlock2 = getTranslatorBlockAtSocket(1);
+		TranslatorBlock translatorBlock2 = getTranslatorBlockAtSocket(2);
 		while (translatorBlock2 != null)
 		{
 			

@@ -95,14 +95,20 @@
 		<BlockGenus name="P1_program" kind="command" color="0 151 57" initlabel="bg.P1_program" is-starter="yes" is-terminator="yes" label-unique="no">
 			<description>
 				<text>this is the loop of the arduino</text>
-				<arg-description n="1" name="setup">
+				<arg-description name="Use P1 Modules" n="1">
+					If this is 'true', the program may hang if you have no modules or if modules have no power.
+				</arg-description>
+				<arg-description n="2" name="setup">
 					A list of commands to run first, and once only.
 				</arg-description>
-				<arg-description n="2" name="start">
+				<arg-description n="3" name="start">
 					A list of commands to repeat forever, after setup commands have finished.
 				</arg-description>
 			</description>
 			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="Use P1 Modules?">
+					<DefaultArg genus-name="true" label="true"/>
+				</BlockConnector>
 				<BlockConnector connector-type="cmd" connector-kind="socket" label="bc.setup" />
 				<BlockConnector connector-type="cmd" connector-kind="socket" label="bc.loop" />
 			</BlockConnectors>
@@ -4465,8 +4471,7 @@
 	<BlockDrawerSets>
 		<BlockDrawerSet name="factory" type="stack" location="southwest" window-per-drawer="no" drawer-draggable="no">
 			<BlockDrawer button-color="211 84 0" type="factory" name="bd.program">
-				<BlockGenusMember>loop</BlockGenusMember>
-				<BlockGenusMember>program</BlockGenusMember>
+				<BlockGenusMember>P1_program</BlockGenusMember>
 				<BlockGenusMember>subroutine</BlockGenusMember>
 				<BlockGenusMember>subroutine-ref</BlockGenusMember>
 				<!--BlockGenusMember>subroutine_var</BlockGenusMember>
@@ -4588,7 +4593,6 @@
 			</BlockDrawer>
 			<BlockDrawer button-color="0 151 57" name="bd.P1_init" type="factory">
 				<BlockGenusMember>P1_program</BlockGenusMember>
-				<BlockGenusMember>P1Autoinit</BlockGenusMember>
 				<BlockGenusMember>rollCall</BlockGenusMember>
 				<BlockGenusMember>printModules</BlockGenusMember>
 				<BlockGenusMember>configWD</BlockGenusMember>
