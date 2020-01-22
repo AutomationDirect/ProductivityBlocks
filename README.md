@@ -7,6 +7,8 @@ ProductivityBlocks is based on the [ardublock](https://github.com/taweili/ardubl
 **Before installing ProductivityBlocks**, please install the [Arduino IDE](https://www.arduino.cc/en/Main/Software#download).
 ProductivityBlocks is a tool for the Arduino IDE, and will not work properly unless it is installed.
 
+**If you are using Productivity1000 modules**, please install the [P1AM-100 library](https://github.com/facts-engineering/P1AM) before installing ProductivityBlocks.
+
 ### Windows:
 
 1. Download the latest ProductivityBlocks installer for Windows from the [Releases](https://github.com/adcpblocks/ProductivityBlocks/releases).
