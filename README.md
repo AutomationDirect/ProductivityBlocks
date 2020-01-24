@@ -11,6 +11,8 @@ ProductivityBlocks is a tool for the Arduino IDE, and will not work properly unl
 
 ### Windows:
 
+Installation Requirements: [.NET v3.0](https://www.microsoft.com/en-us/download/details.aspx?id=3005).
+
 1. Download the latest ProductivityBlocks installer for Windows from the [Releases](https://github.com/adcpblocks/ProductivityBlocks/releases).
 2. Close any Arduino Editor windows.
 
@@ -25,6 +27,8 @@ ProductivityBlocks is a tool for the Arduino IDE, and will not work properly unl
     ![](images/selectproductivityblocks.png)
 
 ### Mac:
+
+Installation Requirements: [Java v1.7](https://www.java.com/en/download/) and up.
 
 1. Download the latest ProductivityBlocks installer for Mac from the [Releases](https://github.com/adcpblocks/ProductivityBlocks/releases).
 
