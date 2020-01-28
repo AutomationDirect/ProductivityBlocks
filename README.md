@@ -17,7 +17,7 @@ ProductivityBlocks is a tool for the Arduino IDE, and will not work properly unl
 Installation Requirements: [.NET v3.0](https://www.microsoft.com/en-us/download/details.aspx?id=3005) (This is already installed on most Windows PCs).
 
 1. Download the latest ProductivityBlocks installer for Windows from the [Releases](https://github.com/adcpblocks/ProductivityBlocks/releases).
-2. Close any Arduino Editor windows.
+2. Close any Arduino IDE windows.
 
     ![](images/closearduino.png)
 
@@ -25,7 +25,7 @@ Installation Requirements: [.NET v3.0](https://www.microsoft.com/en-us/download/
 
     ![](images/runasadmin.png)
 
-3. Open/reopen the Arduino Editor and check for ProductivityBlocks in the tools menu.
+3. Open/reopen the Arduino IDE and check for ProductivityBlocks in the tools menu.
 
     ![](images/selectproductivityblocks.png)
 
@@ -35,11 +35,11 @@ Installation Requirements: [Java v1.7](https://www.java.com/en/download/) and up
 
 1. Download the latest ProductivityBlocks installer for Mac from the [Releases](https://github.com/adcpblocks/ProductivityBlocks/releases).
 
-2. If you have the Arduino Editor running, right click the icon and 'quit' the program.
+2. If you have the Arduino IDE running, right click the icon and 'quit' the program.
 
 3. Run the installer.
 
-4. Open/reopen the Arduino Editor and check for ProductivityBlocks in the tools menu.
+4. Open/reopen the Arduino IDE and check for ProductivityBlocks in the tools menu.
 
 ----
 ## Documentation
