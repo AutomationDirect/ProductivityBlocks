@@ -1,8 +1,11 @@
 # ProductivityBlocks
 
-ProductivityBlocks is an open source block programming tool for the [Arduino IDE](http://www.arduino.cc/en/Main/Software#download). The application is designed to work with the [P1AM-100 library](https://github.com/facts-engineering/P1AM) to program a P1AM CPU, but it may also be used to program other Arduino boards supported by the Arduino IDE.
+ProductivityBlocks is an open source block programming tool for the [Arduino IDE](http://www.arduino.cc/en/Main/Software#download). The application is primarily designed to program a [P1AM-100 CPU](https://www.automationdirect.com/adc/shopping/catalog/programmable_controllers/open_source_controllers_(arduino-compatible)/productivityopen_(arduino-compatible)/controllers_-a-_shields/p1am-100) with the [P1AM-100 library](https://github.com/facts-engineering/P1AM), but it may also be used to program other Arduino boards supported by the Arduino IDE.
 
 ProductivityBlocks is based on the [ardublock](https://github.com/taweili/ardublock) project.
+
+To learn more about this application, please see the [ProductivityBlocks Wiki](https://github.com/AutomationDirect/ProductivityBlocks/wiki).
+
 ## Installation
 **Before installing ProductivityBlocks**, please install the [Arduino IDE](https://www.arduino.cc/en/Main/Software#download).
 ProductivityBlocks is a tool for the Arduino IDE, and will not work properly unless it is installed.
@@ -11,7 +14,7 @@ ProductivityBlocks is a tool for the Arduino IDE, and will not work properly unl
 
 ### Windows:
 
-Installation Requirements: [.NET v3.0](https://www.microsoft.com/en-us/download/details.aspx?id=3005).
+Installation Requirements: [.NET v3.0](https://www.microsoft.com/en-us/download/details.aspx?id=3005) (This is already installed on most Windows PCs).
 
 1. Download the latest ProductivityBlocks installer for Windows from the [Releases](https://github.com/adcpblocks/ProductivityBlocks/releases).
 2. Close any Arduino Editor windows.
