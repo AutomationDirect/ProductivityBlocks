@@ -664,7 +664,7 @@ public class OpenblocksFrame extends JFrame
 	{
 		Color colorVal = null;
 	    for (AbstractColorChooserPanel panel : chooser.getChooserPanels()) {
-	    	if(!panel.getDisplayName().equals("HSV")) {
+	    	if(!panel.getDisplayName().equals("Swatches")) {
 	    		chooser.removeChooserPanel(panel);
 	    	}
 	    }

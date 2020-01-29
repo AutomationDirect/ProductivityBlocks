@@ -3272,6 +3272,9 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="Slot">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Point">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -3858,8 +3861,8 @@
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="enableZReset">
 					<DefaultArg genus-name="true" label="true"/>
 				</BlockConnector>
-				<BlockConnector connector-type="boolean" connector-kind="socket" label="inhibitOn">
-					<DefaultArg genus-name="true" label="true"/>
+				<BlockConnector connector-type="number" connector-kind="socket" label="inhibitOn">
+					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="mode">
 					<DefaultArg genus-name="P1_HSC_Channel.stepDirection" label="stepDirection"/>
@@ -4629,9 +4632,9 @@
 			<BlockDrawer button-color="0 151 57" name="bd.HSC">
 				<BlockGenusMember>P1_HSC_Module_Constructor</BlockGenusMember>
 				<BlockGenusMember>P1_HSC</BlockGenusMember>
-				<BlockGenusMember>P1_HSC_Module.configureChannels</BlockGenusMember>
+				<!-- BlockGenusMember>P1_HSC_Module.configureChannels</BlockGenusMember-->
 				<BlockGenusMember>P1_HSC_Module.configureChannels_chan1_chan2</BlockGenusMember>
-				<BlockGenusMember>P1_HSC_Module.getChannel</BlockGenusMember>
+				<!-- BlockGenusMember>P1_HSC_Module.getChannel</BlockGenusMember-->
 				<BlockGenusMember>P1_HSC_Module.readInputs</BlockGenusMember>
 				<BlockGenusMember>P1_HSC_Channel_Constructor</BlockGenusMember>
 				<BlockGenusMember>P1_HSC_Channel</BlockGenusMember>
@@ -4641,7 +4644,7 @@
 				<BlockGenusMember>P1_HSC_Channel.setZResetValue</BlockGenusMember>
 				<BlockGenusMember>P1_HSC_Channel.readInputs</BlockGenusMember>
 				<BlockGenusMember>P1_HSC_Channel.readAlerts</BlockGenusMember>
-				<BlockGenusMember>P1_HSC_Module.channel1</BlockGenusMember>
+				<!-- BlockGenusMember>P1_HSC_Module.channel1</BlockGenusMember-->
 				<BlockGenusMember>P1_HSC_Channel.stepDirection</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="0 151 57" name="bd.P1_PWM" type="factory">
