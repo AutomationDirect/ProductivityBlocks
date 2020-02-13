@@ -27,6 +27,7 @@ public class CPopupMenu extends JPopupMenu implements ActionListener {
     private JComponent view;
     private double zoom = 1.0;
     private int items = 0;
+    public int min_width = 50;
     //private int MARGIN = 20;
 
     CPopupMenu() {
@@ -60,7 +61,7 @@ public class CPopupMenu extends JPopupMenu implements ActionListener {
         this.zoom = zoom;
         // change the size of the panel and the text
         view.setPreferredSize(new Dimension((int) (100 * this.zoom), (int) (items * ITEM_HEIGHT * this.zoom)));
-        this.setPopupSize((int) (100 * this.zoom) + 50, (int) (Math.min(items * ITEM_HEIGHT + 10, 100) * this.zoom)); //CHANGED
+        this.setPopupSize((int) (100 * this.zoom) + min_width, (int) (Math.min(items * ITEM_HEIGHT + 10, 100) * this.zoom)); //CHANGED
     }
 
     @Override

@@ -3038,6 +3038,8 @@
 		</BlockGenus>
 
 <!-- ADC BLOCKS  -->
+
+		<!-- CONSTANTS -->
 		<BlockGenus name="RSS" kind="data" initlabel="bg.RSS" editable-label="no" is-label-value="yes" color="0 151 57">
 			<description>
 				<text>
@@ -3068,6 +3070,601 @@
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
+		<BlockGenus name="Chan_1_4" kind="data" initlabel="bg.Chan_1_4" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Chan_2_4" kind="data" initlabel="bg.Chan_2_4" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Chan_3_4" kind="data" initlabel="bg.Chan_3_4" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Chan_4_4" kind="data" initlabel="bg.Chan_4_4" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="Chan_1_8" kind="data" initlabel="bg.Chan_1_8" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Chan_2_8" kind="data" initlabel="bg.Chan_2_8" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Chan_3_8" kind="data" initlabel="bg.Chan_3_8" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Chan_4_8" kind="data" initlabel="bg.Chan_4_8" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Chan_5_8" kind="data" initlabel="bg.Chan_5_8" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Chan_6_8" kind="data" initlabel="bg.Chan_6_8" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Chan_7_8" kind="data" initlabel="bg.Chan_7_8" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Chan_8_8" kind="data" initlabel="bg.Chan_8_8" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="LSB_min_C" kind="data" initlabel="bg.LSB_min_C" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="LSB_max_C" kind="data" initlabel="bg.LSB_max_C" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="LSB_min_F" kind="data" initlabel="bg.LSB_min_F" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="LSB_max_F" kind="data" initlabel="bg.LSB_max_F" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="NTC_Range_1" kind="data" initlabel="bg.NTC_Range_1" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="NTC_Range_2" kind="data" initlabel="bg.NTC_Range_2" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="NTC_Range_3" kind="data" initlabel="bg.NTC_Range_3" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="NTC_Range_4" kind="data" initlabel="bg.NTC_Range_4" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="NTC_Range_5" kind="data" initlabel="bg.NTC_Range_5" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="NTC_Range_6" kind="data" initlabel="bg.NTC_Range_6" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Digital_Filter_1" kind="data" initlabel="bg.Digital_Filter_1" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Digital_Filter_2" kind="data" initlabel="bg.Digital_Filter_2" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="THM_Range_1" kind="data" initlabel="bg.THM_Range_1" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="THM_Range_2" kind="data" initlabel="bg.THM_Range_2" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="THM_Range_3" kind="data" initlabel="bg.THM_Range_3" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="THM_Range_4" kind="data" initlabel="bg.THM_Range_4" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="THM_Range_5" kind="data" initlabel="bg.THM_Range_5" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="THM_Range_6" kind="data" initlabel="bg.THM_Range_6" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="THM_Range_7" kind="data" initlabel="bg.THM_Range_7" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="THM_Range_8" kind="data" initlabel="bg.THM_Range_8" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="THM_Range_9" kind="data" initlabel="bg.THM_Range_9" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="THM_Range_10" kind="data" initlabel="bg.THM_Range_10" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="THM_Range_11" kind="data" initlabel="bg.THM_Range_11" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="THM_Range_12" kind="data" initlabel="bg.THM_Range_12" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="THM_Range_13" kind="data" initlabel="bg.THM_Range_13" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="THM_Range_14" kind="data" initlabel="bg.THM_Range_14" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="THM_Range_15" kind="data" initlabel="bg.THM_Range_15" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PWM_Range_1" kind="data" initlabel="bg.PWM_Range_1" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PWM_Range_2" kind="data" initlabel="bg.PWM_Range_2" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="RTD_Range_1" kind="data" initlabel="bg.RTD_Range_1" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="RTD_Range_2" kind="data" initlabel="bg.RTD_Range_2" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="RTD_Range_3" kind="data" initlabel="bg.RTD_Range_3" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="RTD_Range_4" kind="data" initlabel="bg.RTD_Range_4" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="RTD_Range_5" kind="data" initlabel="bg.RTD_Range_5" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="RTD_Range_6" kind="data" initlabel="bg.RTD_Range_6" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="RTD_Range_7" kind="data" initlabel="bg.RTD_Range_7" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="RTD_Range_8" kind="data" initlabel="bg.RTD_Range_8" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="RTD_Range_9" kind="data" initlabel="bg.RTD_Range_9" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="RTD_Range_10" kind="data" initlabel="bg.RTD_Range_10" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="RTD_Range_11" kind="data" initlabel="bg.RTD_Range_11" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="RTD_Range_12" kind="data" initlabel="bg.RTD_Range_12" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="RTD_Range_13" kind="data" initlabel="bg.RTD_Range_13" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="_04AD_Range_1" kind="data" initlabel="bg._04AD_Range_1" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="_04AD_Range_2" kind="data" initlabel="bg._04AD_Range_2" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="_04AD_Range_3" kind="data" initlabel="bg._04AD_Range_3" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="_04AD_Range_4" kind="data" initlabel="bg._04AD_Range_4" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="_04AD_Range_5" kind="data" initlabel="bg._04AD_Range_5" editable-label="no" is-label-value="yes" color="0 151 57">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<!-- Function Blocks -->
 		<BlockGenus name="runstopswitch" kind="function" color="0 151 57" initlabel="bg.runstopswitch">
 			<description>
 				<text></text>
@@ -3293,31 +3890,19 @@
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Chan Enable">
-					<DefaultArg genus-name="number_long" label="0x03"></DefaultArg>
+					<DefaultArg genus-name="Chan_4_4" label="Channels 1-4"></DefaultArg>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Chan 1 Range">
-					<DefaultArg genus-name="number_long" label="0x03"></DefaultArg>
-				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="Chan 1 Filter Enable">
-					<DefaultArg genus-name="number_long" label="0x00"></DefaultArg>
+					<DefaultArg genus-name="_04AD_Range_4" label="0-20mA"></DefaultArg>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Chan 2 Range">
-					<DefaultArg genus-name="number_long" label="0x03"></DefaultArg>
-				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="Chan 2 Filter Enable">
-					<DefaultArg genus-name="number_long" label="0x00"></DefaultArg>
+					<DefaultArg genus-name="_04AD_Range_4" label="0-20mA"></DefaultArg>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Chan 3 Range">
-					<DefaultArg genus-name="number_long" label="0x03"></DefaultArg>
-				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="Chan 3 Filter Enable">
-					<DefaultArg genus-name="number_long" label="0x00"></DefaultArg>
+					<DefaultArg genus-name="_04AD_Range_4" label="0-20mA"></DefaultArg>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Chan 4 Range">
-					<DefaultArg genus-name="number_long" label="0x03"></DefaultArg>
-				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="Chan 4 Filter Enable">
-					<DefaultArg genus-name="number_long" label="0x00"></DefaultArg>
+					<DefaultArg genus-name="_04AD_Range_4" label="0-20mA"></DefaultArg>
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -3335,22 +3920,22 @@
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Channel Enable">
-					<DefaultArg genus-name="number_long" label="0x03"></DefaultArg>
+					<DefaultArg genus-name="Chan_4_4" label="Channels 1-4"></DefaultArg>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Burnout and Units">
-					<DefaultArg genus-name="number_long" label="0x05"></DefaultArg>
+					<DefaultArg genus-name="LSB_min_F" label="Low Side Burnout (min scale)/Temp in &#x00BA; F"></DefaultArg>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Chan 1 Range">
-					<DefaultArg genus-name="number_long" label="0x00"></DefaultArg>
+					<DefaultArg genus-name="THM_Range_1" label="J"></DefaultArg>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Chan 2 Range">
-					<DefaultArg genus-name="number_long" label="0x00"></DefaultArg>
+					<DefaultArg genus-name="THM_Range_1" label="J"></DefaultArg>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Chan 3 Range">
-					<DefaultArg genus-name="number_long" label="0x00"></DefaultArg>
+					<DefaultArg genus-name="THM_Range_1" label="J"></DefaultArg>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Chan 4 Range">
-					<DefaultArg genus-name="number_long" label="0x00"></DefaultArg>
+					<DefaultArg genus-name="THM_Range_1" label="J"></DefaultArg>
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -3368,16 +3953,16 @@
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Channel Enable">
-					<DefaultArg genus-name="number_long" label="0x03"></DefaultArg>
+					<DefaultArg genus-name="Chan_4_4" label="Channels 1-4"></DefaultArg>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Burnout and Units">
-					<DefaultArg genus-name="number_long" label="0x05"></DefaultArg>
+					<DefaultArg genus-name="LSB_min_F" label="Low Side Burnout (min scale)/Temp in &#x00BA; F"></DefaultArg>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Range">
-					<DefaultArg genus-name="number_long" label="0x00"></DefaultArg>
+					<DefaultArg genus-name="NTC_Range_1" label="2252"></DefaultArg>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Digital Filter">
-					<DefaultArg genus-name="number_long" label="0x02"></DefaultArg>
+					<DefaultArg genus-name="Digital_Filter_1" label="33Hz/16bit/61ms"></DefaultArg>
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -3395,16 +3980,16 @@
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Channel Enable">
-					<DefaultArg genus-name="number_long" label="0x03"></DefaultArg>
+					<DefaultArg genus-name="Chan_4_4" label="Channels 1-4"></DefaultArg>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Burnout and Units">
-					<DefaultArg genus-name="number_long" label="0x05"></DefaultArg>
+					<DefaultArg genus-name="LSB_min_F" label="Low Side Burnout (min scale)/Temp in &#x00BA; F"></DefaultArg>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Range">
-					<DefaultArg genus-name="number_long" label="0x01"></DefaultArg>
+					<DefaultArg genus-name="RTD_Range_2" label="Pt100"></DefaultArg>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Digital Filter">
-					<DefaultArg genus-name="number_long" label="0x00"></DefaultArg>
+					<DefaultArg genus-name="Digital_Filter_1" label="33Hz/16bit/61ms"></DefaultArg>
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -3422,7 +4007,7 @@
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Channel Enable">
-					<DefaultArg genus-name="number_long" label="0x03"></DefaultArg>
+					<DefaultArg genus-name="Chan_4_8" label="Channels 1-4"></DefaultArg>
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -3440,16 +4025,16 @@
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Channel 1">
-					<DefaultArg genus-name="number_long" label="0x02"></DefaultArg>
+					<DefaultArg genus-name="PWM_Range_1" label="PWM"></DefaultArg>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Channel 2">
-					<DefaultArg genus-name="number_long" label="0x02"></DefaultArg>
+					<DefaultArg genus-name="PWM_Range_1" label="PWM"></DefaultArg>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Channel 3">
-					<DefaultArg genus-name="number_long" label="0x02"></DefaultArg>
+					<DefaultArg genus-name="PWM_Range_1" label="PWM"></DefaultArg>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Channel 4">
-					<DefaultArg genus-name="number_long" label="0x02"></DefaultArg>
+					<DefaultArg genus-name="PWM_Range_1" label="PWM"></DefaultArg>
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -3577,7 +4162,7 @@
 				<text>Write the low bit of 'Value' to a channel of a P1 module.</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="poly" connector-kind="plug">
+				<BlockConnector connector-type="number" connector-kind="plug">
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Byte Number">
 					<DefaultArg genus-name="number" label="1" />
@@ -4231,6 +4816,83 @@
 		
 <!-- Start of Ardublock Standard UI layout -->
 	<BlockFamilies>
+		<BlockFamily>
+			<FamilyMember>LSB_min_C</FamilyMember>
+			<FamilyMember>LSB_max_C</FamilyMember>
+			<FamilyMember>LSB_min_F</FamilyMember>
+			<FamilyMember>LSB_max_F</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>Digital_Filter_1</FamilyMember>
+			<FamilyMember>Digital_Filter_2</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>PWM_Range_1</FamilyMember>
+			<FamilyMember>PWM_Range_2</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>NTC_Range_1</FamilyMember>
+			<FamilyMember>NTC_Range_2</FamilyMember>
+			<FamilyMember>NTC_Range_3</FamilyMember>
+			<FamilyMember>NTC_Range_4</FamilyMember>
+			<FamilyMember>NTC_Range_5</FamilyMember>
+			<FamilyMember>NTC_Range_6</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>THM_Range_1</FamilyMember>
+			<FamilyMember>THM_Range_2</FamilyMember>
+			<FamilyMember>THM_Range_3</FamilyMember>
+			<FamilyMember>THM_Range_4</FamilyMember>
+			<FamilyMember>THM_Range_5</FamilyMember>
+			<FamilyMember>THM_Range_6</FamilyMember>
+			<FamilyMember>THM_Range_7</FamilyMember>
+			<FamilyMember>THM_Range_8</FamilyMember>
+			<FamilyMember>THM_Range_9</FamilyMember>
+			<FamilyMember>THM_Range_10</FamilyMember>
+			<FamilyMember>THM_Range_11</FamilyMember>
+			<FamilyMember>THM_Range_12</FamilyMember>
+			<FamilyMember>THM_Range_13</FamilyMember>
+			<FamilyMember>THM_Range_14</FamilyMember>
+			<FamilyMember>THM_Range_15</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>RTD_Range_1</FamilyMember>
+			<FamilyMember>RTD_Range_2</FamilyMember>
+			<FamilyMember>RTD_Range_3</FamilyMember>
+			<FamilyMember>RTD_Range_4</FamilyMember>
+			<FamilyMember>RTD_Range_5</FamilyMember>
+			<FamilyMember>RTD_Range_6</FamilyMember>
+			<FamilyMember>RTD_Range_7</FamilyMember>
+			<FamilyMember>RTD_Range_8</FamilyMember>
+			<FamilyMember>RTD_Range_9</FamilyMember>
+			<FamilyMember>RTD_Range_10</FamilyMember>
+			<FamilyMember>RTD_Range_11</FamilyMember>
+			<FamilyMember>RTD_Range_12</FamilyMember>
+			<FamilyMember>RTD_Range_13</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>_04AD_Range_1</FamilyMember>
+			<FamilyMember>_04AD_Range_2</FamilyMember>
+			<FamilyMember>_04AD_Range_3</FamilyMember>
+			<FamilyMember>_04AD_Range_4</FamilyMember>
+			<FamilyMember>_04AD_Range_5</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>Chan_1_4</FamilyMember>
+			<FamilyMember>Chan_2_4</FamilyMember>
+			<FamilyMember>Chan_3_4</FamilyMember>
+			<FamilyMember>Chan_4_4</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>Chan_1_8</FamilyMember>
+			<FamilyMember>Chan_2_8</FamilyMember>
+			<FamilyMember>Chan_3_8</FamilyMember>
+			<FamilyMember>Chan_4_8</FamilyMember>
+			<FamilyMember>Chan_5_8</FamilyMember>
+			<FamilyMember>Chan_6_8</FamilyMember>
+			<FamilyMember>Chan_7_8</FamilyMember>
+			<FamilyMember>Chan_8_8</FamilyMember>
+		</BlockFamily>
 		<BlockFamily>
 			<FamilyMember>Serial.printNumber</FamilyMember>
 			<FamilyMember>Serial.printNumberBin</FamilyMember>

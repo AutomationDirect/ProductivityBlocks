@@ -9,7 +9,7 @@ import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
 public class AD_chan_config  extends TranslatorBlock {
-
+	
 	private static ResourceBundle uiMessageBundle = ResourceBundle.getBundle("com/ardublock/block/ardublock");
 	
 	public AD_chan_config (Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
@@ -25,15 +25,15 @@ public class AD_chan_config  extends TranslatorBlock {
 			
 			String defstring = "{ 0x40, " + chanEnable +" };";
 
-			String internalVariableName = translator.getNumberVariable(label);
+			String arrayName = label + "_" + slotblock.toCode();
+			String internalVariableName = translator.getNumberVariable(arrayName);
 			if (internalVariableName == null)
 			{
-				internalVariableName = translator.buildVariableName(label);
-				translator.addNumberVariable(label, internalVariableName);
-				translator.addPreprocessorCommand("char " + internalVariableName + "[2] = " + defstring);
+				internalVariableName = translator.buildVariableName(arrayName);
+				translator.addNumberVariable(arrayName, internalVariableName);
+				translator.addPreprocessorCommand("const char " + internalVariableName + "[] = " + defstring);
 //				translator.addSetupCommand(internalVariableName + " = 0;");
 			}
-			
 			return "P1.configureModule("+ internalVariableName + ", " + slotblock.toCode()+");";	
 			
 		}

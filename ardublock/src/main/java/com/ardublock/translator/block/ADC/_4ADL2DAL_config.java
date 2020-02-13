@@ -9,7 +9,7 @@ import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
 public class _4ADL2DAL_config  extends TranslatorBlock {
-
+	
 	private static ResourceBundle uiMessageBundle = ResourceBundle.getBundle("com/ardublock/block/ardublock");
 	
 	public _4ADL2DAL_config (Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
@@ -23,12 +23,13 @@ public class _4ADL2DAL_config  extends TranslatorBlock {
 			TranslatorBlock slotblock = this.getRequiredTranslatorBlockAtSocket(0);
 			String defstring = "{ 0x40, 0x03 };";
 			
-			String internalVariableName = translator.getNumberVariable(label);
+			String arrayName = label + "_" + slotblock.toCode();
+			String internalVariableName = translator.getNumberVariable(arrayName);
 			if (internalVariableName == null)
 			{
-				internalVariableName = translator.buildVariableName(label);
-				translator.addNumberVariable(label, internalVariableName);
-				translator.addPreprocessorCommand("char " + internalVariableName + "[2] = " + defstring);
+				internalVariableName = translator.buildVariableName(arrayName);
+				translator.addNumberVariable(arrayName, internalVariableName);
+				translator.addPreprocessorCommand("char " + internalVariableName + "[26] = " + defstring);
 //				translator.addSetupCommand(internalVariableName + " = 0;");
 			}
 			

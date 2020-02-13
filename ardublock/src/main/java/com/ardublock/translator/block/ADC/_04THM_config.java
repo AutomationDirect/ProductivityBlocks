@@ -9,7 +9,7 @@ import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
 public class _04THM_config  extends TranslatorBlock {
-
+	
 	private static ResourceBundle uiMessageBundle = ResourceBundle.getBundle("com/ardublock/block/ardublock");
 	
 	public _04THM_config (Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
@@ -34,14 +34,19 @@ public class _04THM_config  extends TranslatorBlock {
 					",\n" + "0x22, " + chan2Range +
 					",\n" + "0x23, " + chan3Range +
 					",\n" + "0x24, " + chan4Range +
+					",\n" + "0x00, 0x00" +
+					",\n" + "0x00, 0x00" +
+					",\n" + "0x00, 0x00" +
+					",\n" + "0x00, 0x00" +
 					"\n};";
 			
-			String internalVariableName = translator.getNumberVariable(label);
+			String arrayName = label + "_" + slotblock.toCode();
+			String internalVariableName = translator.getNumberVariable(arrayName);
 			if (internalVariableName == null)
 			{
-				internalVariableName = translator.buildVariableName(label);
-				translator.addNumberVariable(label, internalVariableName);
-				translator.addPreprocessorCommand("char " + internalVariableName + "[12] = " + defstring);
+				internalVariableName = translator.buildVariableName(arrayName);
+				translator.addNumberVariable(arrayName, internalVariableName);
+				translator.addPreprocessorCommand("const char " + internalVariableName + "[] = " + defstring);
 //				translator.addSetupCommand(internalVariableName + " = 0;");
 			}
 			

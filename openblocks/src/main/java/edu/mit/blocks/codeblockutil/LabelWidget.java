@@ -740,6 +740,9 @@ public abstract class LabelWidget extends JComponent {
             popupmenu = new CPopupMenu();
             //if connected to a block, add self and add siblings
             for (int i = 0; i < siblings.length; i++) {
+            	if(siblings[i][1].length()*4 > popupmenu.min_width) {
+            		popupmenu.min_width = siblings[i][1].length()*4;
+            	}
                 final String selfGenus = siblings[i][0];
                 CMenuItem selfItem = new CMenuItem(siblings[i][1]);
                 selfItem.addActionListener(new ActionListener() {

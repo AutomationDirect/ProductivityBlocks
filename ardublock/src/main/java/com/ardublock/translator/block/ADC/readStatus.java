@@ -24,6 +24,6 @@ public class readStatus extends TranslatorBlock {
 			translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
 			slot = translatorBlock.toCode();
 			
-			return codePrefix + "P1.readStatus("+ byteNum + ", " + slot +")" + codeSuffix ;	
+			return codePrefix + "(int)P1.readStatus("+ byteNum + ", " + slot +")" + codeSuffix ;	
 		}
 }
