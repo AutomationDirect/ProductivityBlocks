@@ -35,7 +35,7 @@ public class blink extends TranslatorBlock {
 			translator.addDefinitionCommand(ARDUBLOCK_DIGITAL_WRITE_DEFINE);
 			String blinkCode =  "__proBlocksDigitalWrite(" + pinNum + ",HIGH);\n"
 					+ "delay(" + onDelay + ");\n"
-					+ "__proBlocksDigitalWrite(32,LOW);\n"
+					+ "__proBlocksDigitalWrite(" + pinNum + ",LOW);\n"
 					+ "delay(" + offDelay + ");";
 			return blinkCode;
 		}
