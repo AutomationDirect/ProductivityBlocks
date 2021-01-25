@@ -280,7 +280,7 @@ public class OpenblocksFrame extends JFrame
 		versionLabel.setPreferredSize(new Dimension(aboutDialogDimension.width,20));
         JTextArea infoBox = new JTextArea();
         final String infoString = "ProductivityBlocks is an open source block programming plugin based on Ardublocks."
-        		+ "\nCopyright (C) 2019  automationdirect.com\n" + 
+        		+ "\nCopyright (C) 2021  automationdirect.com\n" + 
         		"\n" + 
         		"    This program is free software: you can redistribute it and/or modify\n" + 
         		"    it under the terms of the GNU General Public License as published by\n" + 
