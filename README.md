@@ -8,7 +8,7 @@ To learn more about this application, please see the [ProductivityBlocks Wiki](h
 
 ## Installation
 **Before installing ProductivityBlocks**, please install [Arduino IDE 1.8.18](https://www.arduino.cc/en/software/OldSoftwareReleases).
-ProductivityBlocks is a tool for the Arduino IDE, and will not work properly unless it is installed.
+ProductivityBlocks is a tool for the Arduino IDE, and will not work properly unless it is installed. **Please note that the most current Arduino IDE versions do not support ProductivityBlocks. Use the link above to install version 1.8.18.**
 
 **If you are using [Productivity1000 modules](https://www.automationdirect.com/adc/shopping/catalog/programmable_controllers/productivity_series_controllers/productivity1000_(stackable_micro_plc))**, please install the [P1AM-100 library](https://github.com/facts-engineering/P1AM) before installing ProductivityBlocks.
 
