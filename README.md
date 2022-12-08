@@ -1,13 +1,13 @@
 # ProductivityBlocks
 
-ProductivityBlocks is an open source block programming tool for the [Arduino IDE](http://www.arduino.cc/en/Main/Software#download). The application is primarily designed to program a [P1AM-100 CPU](https://www.automationdirect.com/adc/shopping/catalog/programmable_controllers/open_source_controllers_(arduino-compatible)/productivityopen_(arduino-compatible)/controllers_-a-_shields/p1am-100) with the [P1AM-100 library](https://github.com/facts-engineering/P1AM), but it may also be used to program other Arduino boards supported by the Arduino IDE.
+ProductivityBlocks is an open source block programming tool for the [Arduino IDE](https://www.arduino.cc/en/software/OldSoftwareReleases). The application is primarily designed to program a [P1AM-100 CPU](https://www.automationdirect.com/adc/shopping/catalog/programmable_controllers/open_source_controllers_(arduino-compatible)/productivityopen_(arduino-compatible)/controllers_-a-_shields/p1am-100) with the [P1AM-100 library](https://github.com/facts-engineering/P1AM), but it may also be used to program other Arduino boards supported by the Arduino IDE.
 
 ProductivityBlocks is based on the [ardublock](https://github.com/taweili/ardublock) project.
 
 To learn more about this application, please see the [ProductivityBlocks Wiki](https://github.com/AutomationDirect/ProductivityBlocks/wiki).
 
 ## Installation
-**Before installing ProductivityBlocks**, please install the [Arduino IDE](https://www.arduino.cc/en/Main/Software#download).
+**Before installing ProductivityBlocks**, please install [Arduino IDE 1.8.18](https://www.arduino.cc/en/software/OldSoftwareReleases).
 ProductivityBlocks is a tool for the Arduino IDE, and will not work properly unless it is installed.
 
 **If you are using [Productivity1000 modules](https://www.automationdirect.com/adc/shopping/catalog/programmable_controllers/productivity_series_controllers/productivity1000_(stackable_micro_plc))**, please install the [P1AM-100 library](https://github.com/facts-engineering/P1AM) before installing ProductivityBlocks.
